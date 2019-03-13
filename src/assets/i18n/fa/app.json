@@ -1,0 +1,26 @@
+{
+  "appplication-title": "برنامه تست",
+  "get-help": "راهنما",
+  "login": {
+    "title": "ورود به سیستم",
+    "button": "ورود",
+    "userName": "نام کاربری",
+    "password": "کلمه عبور",
+    "old-password": "کلمه عبور قبلی",
+    "re-password": "تکرار کلمه عبور",
+    "change_Pass":"تغییر کلمه عبور",
+    "userName_placeHolder": "نام کاربری خود را وارد کنید",
+    "password_placeHolder": "کلمه عبور را وارد کنید"
+  },
+  "search": "جستجو",
+  "code": "کد",
+  "name": "نام",
+  "address": "آدرس",
+  "tellNo": "تلفن",
+  "fax": "نمابر",
+  "webAddress": "سایت",
+  "description": "توضیح",
+  "sex": "جنسیت",
+  "date": "تاریخ",
+  "ads":"تبلیغ"
+}

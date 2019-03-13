@@ -1,0 +1,18 @@
+{
+  "appplication-title": "Narik Demo",
+  "get-help": "Help",
+  "login": {
+    "title": "Sign in",
+    "button": "Log in",
+    "userName": "Username",
+    "password": "Password",
+    "old-password": "Old Password",
+    "re-password": "Confirm New Password",
+    "change_Pass": "Change Password",
+    "userName_placeHolder": "Your Username",
+    "password_placeHolder": "Your Password"
+  },
+  "search": "Search",
+  "management":"Management",
+  "menu":"Menu"
+}

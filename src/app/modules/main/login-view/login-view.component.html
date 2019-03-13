@@ -1,0 +1,30 @@
+<narik-busy-indicator [isBusy]="isBusy">
+  <div class="login-container" *ngIf="!onNavigationg" [tab-guard]>
+    <mat-card class="login-card">
+      <mat-card-header class="mb-4 mt-2">
+        <mat-card-title>{{"login.title" | translate}}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <form>
+          <div>
+            <div>
+              <narik-input [auto-focus] prefixIcon='account_box' [placeHolder]='"login.userName_placeHolder" | translate'
+                [(ngModel)]="loginModel.userName" name="name" [label]="'login.userName' | translate" type='text'>
+              </narik-input>
+            </div>
+
+            <div>
+              <narik-input (keyup.enter)="login()" prefixIcon='lock' [placeHolder]='"login.password_placeHolder" | translate'
+                [(ngModel)]="loginModel.password" name="password" [label]="'login.password' | translate" type='password'>
+              </narik-input>
+            </div>
+          </div>
+        </form>
+      </mat-card-content>
+      <mat-card-actions align="center">
+        <narik-button [cssClass]="'item-full-width'" (nClick)="login()" [isBusy]='isBusy' label=' {{"login.button" | translate}}' color="primary">
+        </narik-button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</narik-busy-indicator>

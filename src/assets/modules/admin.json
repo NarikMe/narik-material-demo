@@ -1,0 +1,1007 @@
+{
+  "imports": {
+    "$$dataInfo": "./base/data-info.json",
+    "$$toolbar": "./base/tool-bars.json",
+    "$$uiDefaults": "./base/ui-default-options.json"
+  },
+  "translateItems": ["admin"],
+  "dataInfo": "$$dataInfo.dataInfo",
+  "metaData": {
+    "UiDefaultOptions": ["$$uiDefaults.select"],
+
+    "entities": [{
+        "key": "userAccount",
+        "fields": [{
+            "name": "userName",
+            "required": true,
+            "fieldType": "text"
+          },
+          {
+            "name": "title",
+            "required": true,
+            "fieldType": "text"
+          },
+          {
+            "name": "password",
+            "title": "login.password",
+            "required": true,
+            "showInList": false,
+            "fieldType": "password"
+          },
+          {
+            "name": "isActive",
+            "required": true,
+            "fieldType": "boolean"
+          }
+        ],
+        "defaultEntity": {
+          "isActive": true
+        }
+      },
+      {
+        "key": "role",
+        "fields": [{
+            "name": "title",
+            "required": true,
+            "fieldType": "text"
+          },
+          {
+            "name": "isActive",
+            "required": true,
+
+            "fieldType": "boolean"
+          }
+        ],
+        "defaultEntity": {
+          "isActive": true
+        }
+      }, {
+        "key": "account",
+        "fields": [{
+            "name": "availBalance",
+            "required": false,
+            "fieldType": "number"
+          },
+          {
+            "name": "closeDate",
+            "required": false,
+            "fieldType": "date"
+
+          },
+          {
+            "name": "lastActivityDate",
+            "required": false,
+
+
+
+            "fieldType": "date"
+
+          },
+          {
+            "name": "openDate",
+            "required": true,
+
+
+
+            "fieldType": "date"
+
+          },
+          {
+            "name": "pendingBalance",
+            "required": false,
+
+            "fieldType": "number"
+
+
+
+          },
+          {
+            "name": "status",
+            "required": false,
+            "fieldType": "text"
+
+
+
+
+          },
+          {
+            "name": "custId",
+            "required": false,
+            "dataInfo": {
+              "dataKey": "customer",
+              "dataProviderKey": "remote"
+            },
+
+
+
+
+            "fieldType": "select"
+          },
+          {
+            "name": "openBranchId",
+            "required": true,
+            "dataInfo": {
+              "dataKey": "branch",
+              "dataProviderKey": "remote"
+            },
+
+
+
+
+            "fieldType": "select"
+          },
+          {
+            "name": "openEmpId",
+            "required": true,
+            "dataInfo": {
+              "dataKey": "employee",
+              "dataProviderKey": "remote"
+            },
+
+
+
+
+            "fieldType": "select"
+          },
+          {
+            "name": "productCd",
+            "required": true,
+            "dataInfo": {
+              "dataKey": "product",
+              "dataProviderKey": "remote"
+            },
+            "fieldType": "select"
+          }
+        ],
+        "defaultEntity": {
+
+        }
+      },
+      {
+        "key": "accTransaction",
+        "fields": [{
+            "name": "amount",
+            "required": true,
+
+            "fieldType": "number"
+
+
+
+          },
+          {
+            "name": "fundsAvailDate",
+            "required": true,
+
+
+
+            "fieldType": "date"
+
+          },
+          {
+            "name": "txnDate",
+            "required": true,
+
+
+
+            "fieldType": "date"
+
+          },
+          {
+            "name": "txnTypeCd",
+            "required": false,
+            "fieldType": "text"
+
+
+
+
+          },
+          {
+            "name": "accountId",
+            "required": false,
+            "dataInfo": {
+              "dataKey": "account",
+              "dataProviderKey": "remote"
+            },
+
+
+
+
+            "fieldType": "select"
+          },
+          {
+            "name": "executionBranchId",
+            "required": false,
+            "dataInfo": {
+              "dataKey": "branch",
+              "dataProviderKey": "remote"
+            },
+
+
+
+
+            "fieldType": "select"
+          },
+          {
+            "name": "tellerEmpId",
+            "required": false,
+            "dataInfo": {
+              "dataKey": "employee",
+              "dataProviderKey": "remote"
+            },
+
+
+
+
+            "fieldType": "select"
+          }
+        ],
+        "defaultEntity": {
+
+        }
+      },
+      {
+        "key": "branch",
+        "fields": [{
+            "name": "address",
+            "required": false,
+            "fieldType": "text"
+
+
+
+
+          },
+          {
+            "name": "city",
+            "required": false,
+            "fieldType": "text"
+
+
+
+
+          },
+          {
+            "name": "name",
+            "required": true,
+            "fieldType": "text"
+
+
+
+
+          },
+          {
+            "name": "state",
+            "required": false,
+            "fieldType": "text"
+
+
+
+
+          },
+          {
+            "name": "zipCode",
+            "required": false,
+            "fieldType": "text"
+
+
+
+
+          }
+        ],
+        "defaultEntity": {
+
+        }
+      },
+      {
+        "key": "business",
+        "fields": [{
+            "name": "incorpDate",
+            "required": false,
+
+
+
+            "fieldType": "date"
+
+          },
+          {
+            "name": "name",
+            "required": true,
+            "fieldType": "text"
+
+
+
+
+          },
+          {
+            "name": "stateId",
+            "required": true,
+            "fieldType": "text"
+
+
+
+
+          }
+        ],
+        "defaultEntity": {
+
+        }
+      },
+      {
+        "key": "customer",
+        "fields": [{
+            "name": "address",
+            "required": false,
+            "fieldType": "text"
+
+
+
+
+          },
+          {
+            "name": "city",
+            "required": false,
+            "fieldType": "text"
+
+
+
+
+          },
+          {
+            "name": "custTypeCd",
+            "required": true,
+            "fieldType": "text"
+
+
+
+
+          },
+          {
+            "name": "fedId",
+            "required": true,
+            "fieldType": "text"
+
+
+
+
+          },
+          {
+            "name": "postalCode",
+            "required": false,
+            "fieldType": "text"
+
+
+
+
+          },
+          {
+            "name": "state",
+            "required": false,
+            "fieldType": "text"
+
+
+
+
+          }
+        ],
+        "defaultEntity": {
+
+        }
+      },
+      {
+        "key": "department",
+        "fields": [{
+          "name": "name",
+          "required": true,
+          "fieldType": "text"
+
+
+
+
+        }],
+        "defaultEntity": {
+
+        }
+      },
+      {
+        "key": "employee",
+        "fields": [{
+            "name": "endDate",
+            "required": false,
+
+
+
+            "fieldType": "date"
+
+          },
+          {
+            "name": "firstName",
+            "required": true,
+            "fieldType": "text"
+
+
+
+
+          },
+          {
+            "name": "lastName",
+            "required": true,
+            "fieldType": "text"
+
+
+
+
+          },
+          {
+            "name": "startDate",
+            "required": true,
+
+
+
+            "fieldType": "date"
+
+          },
+          {
+            "name": "title",
+            "required": false,
+            "fieldType": "text"
+
+
+
+
+          },
+          {
+            "name": "assignedBranchId",
+            "required": false,
+            "dataInfo": {
+              "dataKey": "branch",
+              "dataProviderKey": "remote"
+            },
+
+
+
+
+            "fieldType": "select"
+          },
+          {
+            "name": "deptId",
+            "required": false,
+            "dataInfo": {
+              "dataKey": "department",
+              "dataProviderKey": "remote"
+            },
+
+
+
+
+            "fieldType": "select"
+          },
+          {
+            "name": "superiorEmpId",
+            "required": false,
+            "dataInfo": {
+              "dataKey": "employee",
+              "dataProviderKey": "remote"
+            },
+
+
+
+
+            "fieldType": "select"
+          }
+        ],
+        "defaultEntity": {
+
+        }
+      },
+      {
+        "key": "individual",
+        "fields": [{
+            "name": "birthDate",
+            "required": false,
+
+
+
+            "fieldType": "date"
+
+          },
+          {
+            "name": "firstName",
+            "required": true,
+            "fieldType": "text"
+
+
+
+
+          },
+          {
+            "name": "lastName",
+            "required": true,
+            "fieldType": "text"
+
+
+
+
+          }
+        ],
+        "defaultEntity": {
+
+        }
+      },
+      {
+        "key": "officer",
+        "fields": [{
+            "name": "endDate",
+            "required": false,
+
+
+
+            "fieldType": "date"
+
+          },
+          {
+            "name": "firstName",
+            "required": true,
+            "fieldType": "text"
+
+
+
+
+          },
+          {
+            "name": "lastName",
+            "required": true,
+            "fieldType": "text"
+
+
+
+
+          },
+          {
+            "name": "startDate",
+            "required": true,
+
+
+
+            "fieldType": "date"
+
+          },
+          {
+            "name": "title",
+            "required": false,
+            "fieldType": "text"
+
+
+
+
+          },
+          {
+            "name": "custId",
+            "required": false,
+            "dataInfo": {
+              "dataKey": "customer",
+              "dataProviderKey": "remote"
+            },
+
+
+
+
+            "fieldType": "select"
+          }
+        ],
+        "defaultEntity": {
+
+        }
+      },
+      {
+        "key": "product",
+        "fields": [{
+            "name": "productCd",
+            "required": true,
+            "fieldType": "text"
+          },
+          {
+            "name": "dateOffered",
+            "required": false,
+            "options": {
+              "groupIndex": 1
+            },
+            "fieldType": "date"
+          },
+          {
+            "name": "dateRetired",
+            "required": false,
+            "options": {
+              "groupIndex": 1
+            },
+            "fieldType": "date"
+
+          },
+          {
+            "name": "name",
+            "required": true,
+            "fieldType": "text"
+          },
+          {
+            "name": "productTypeCd",
+            "required": false,
+            "dataInfo": {
+              "dataKey": "productType",
+              "dataProviderKey": "remote"
+            },
+
+            "fieldType": "select"
+          }
+        ],
+        "defaultEntity": {
+
+        }
+      },
+      {
+        "key": "productType",
+        "fields": [{
+          "name": "name",
+          "required": false,
+          "fieldType": "text"
+
+
+
+
+        }],
+        "defaultEntity": {
+
+        }
+      }
+    ],
+    "views": [{
+        "key": "userAccount",
+        "viewType": "Detail",
+        "entity": "userAccount",
+        "toolbarKey": "userDetailToolBar"
+      },
+      {
+        "key": "userAccount-list",
+        "viewType": "List",
+        "entity": "userAccount"
+      },
+
+      {
+        "key": "role",
+        "viewType": "Detail",
+        "entity": "role"
+      },
+      {
+        "key": "role-list",
+        "viewType": "List",
+        "entity": "role"
+      },
+      {
+        "key": "account",
+        "viewType": "Detail",
+        "entity": "account"
+
+      },
+      {
+        "key": "account-list",
+        "viewType": "List",
+        "entity": "account"
+      },
+
+      {
+        "key": "accTransaction",
+        "viewType": "Detail",
+        "entity": "accTransaction"
+      },
+      {
+        "key": "accTransaction-list",
+        "viewType": "List",
+        "entity": "accTransaction"
+      },
+
+      {
+        "key": "branch",
+        "viewType": "Detail",
+        "entity": "branch"
+      },
+      {
+        "key": "branch-list",
+        "viewType": "List",
+        "entity": "branch"
+      },
+
+      {
+        "key": "business",
+        "viewType": "Detail",
+        "entity": "business"
+      },
+      {
+        "key": "business-list",
+        "viewType": "List",
+        "entity": "business"
+      },
+
+      {
+        "key": "customer",
+        "viewType": "Detail",
+        "entity": "customer"
+      },
+      {
+        "key": "customer-list",
+        "viewType": "List",
+        "entity": "customer"
+      },
+
+      {
+        "key": "department",
+        "viewType": "Detail",
+        "entity": "department"
+      },
+      {
+        "key": "department-list",
+        "viewType": "List",
+        "entity": "department"
+      },
+
+      {
+        "key": "employee",
+        "viewType": "Detail",
+        "entity": "employee"
+      },
+      {
+        "key": "employee-list",
+        "viewType": "List",
+        "entity": "employee"
+      },
+
+      {
+        "key": "individual",
+        "viewType": "Detail",
+        "entity": "individual"
+      },
+      {
+        "key": "individual-list",
+        "viewType": "List",
+        "entity": "individual"
+      },
+
+      {
+        "key": "officer",
+        "viewType": "Detail",
+        "entity": "officer"
+      },
+      {
+        "key": "officer-list",
+        "viewType": "List",
+        "entity": "officer"
+      },
+      {
+        "key": "product",
+        "viewType": "Detail",
+        "entity": "product",
+        "options": {
+          "columnsCount": 2,
+          "groupFields": true
+        }
+      },
+      {
+        "key": "product-list",
+        "viewType": "List",
+        "entity": "product"
+      },
+
+      {
+        "key": "productType",
+        "viewType": "Detail",
+        "entity": "productType"
+      },
+      {
+        "key": "productType-list",
+        "viewType": "List",
+        "entity": "productType"
+      }
+    ],
+    "menuItems": [{
+        "title": "userAccount_-_role",
+        "icon": "nb-person",
+        "link": "/pages/ui-features",
+        "children": [{
+            "title": "new_userAccount",
+            "link": "userAccount"
+          },
+          {
+            "title": "userAccount_list",
+            "link": "userAccount-list"
+          },
+          {
+            "title": "new_role",
+            "link": "role"
+          },
+          {
+            "title": "role_lis",
+            "link": "role-list"
+          }
+        ]
+      },
+      {
+        "title": "account",
+        "icon": "nb-keypad",
+        "link": "/pages/ui-features",
+        "children": [{
+            "title": "account_new",
+            "link": "account"
+          },
+          {
+            "title": "list_account",
+            "link": "account-list"
+          }
+        ]
+      },
+
+      {
+        "title": "accTransaction",
+        "icon": "nb-keypad",
+        "link": "/pages/ui-features",
+        "children": [{
+            "title": "accTransaction_new",
+            "link": "accTransaction"
+          },
+          {
+            "title": "list_accTransaction",
+            "link": "accTransaction-list"
+          }
+        ]
+      },
+
+      {
+        "title": "branch",
+        "icon": "nb-keypad",
+        "link": "/pages/ui-features",
+        "children": [{
+            "title": "branch_new",
+            "link": "branch"
+          },
+          {
+            "title": "list_branch",
+            "link": "branch-list"
+          }
+        ]
+      },
+
+      {
+        "title": "business",
+        "icon": "nb-keypad",
+        "link": "/pages/ui-features",
+        "children": [{
+            "title": "business_new",
+            "link": "business"
+          },
+          {
+            "title": "list_business",
+            "link": "business-list"
+          }
+        ]
+      },
+
+      {
+        "title": "customer",
+        "icon": "nb-keypad",
+        "link": "/pages/ui-features",
+        "children": [{
+            "title": "customer_new",
+            "link": "customer"
+          },
+          {
+            "title": "list_customer",
+            "link": "customer-list"
+          }
+        ]
+      },
+
+      {
+        "title": "department",
+        "icon": "nb-keypad",
+        "link": "/pages/ui-features",
+        "children": [{
+            "title": "department_new",
+            "link": "department"
+          },
+          {
+            "title": "list_department",
+            "link": "department-list"
+          }
+        ]
+      },
+
+      {
+        "title": "employee",
+        "icon": "nb-keypad",
+        "link": "/pages/ui-features",
+        "children": [{
+            "title": "employee_new",
+            "link": "employee"
+          },
+          {
+            "title": "list_employee",
+            "link": "employee-list"
+          }
+        ]
+      },
+
+      {
+        "title": "individual",
+        "icon": "nb-keypad",
+        "link": "/pages/ui-features",
+        "children": [{
+            "title": "individual_new",
+            "link": "individual"
+          },
+          {
+            "title": "list_individual",
+            "link": "individual-list"
+          }
+        ]
+      },
+
+      {
+        "title": "officer",
+        "icon": "nb-keypad",
+        "link": "/pages/ui-features",
+        "children": [{
+            "title": "officer_new",
+            "link": "officer"
+          },
+          {
+            "title": "list_officer",
+            "link": "officer-list"
+          }
+        ]
+      },
+
+      {
+        "title": "product",
+        "icon": "nb-keypad",
+        "link": "/pages/ui-features",
+        "children": [{
+            "title": "product_new",
+            "link": "product"
+          },
+          {
+            "title": "list_product",
+            "link": "product-list"
+          }
+        ]
+      },
+
+      {
+        "title": "productType",
+        "icon": "nb-keypad",
+        "link": "/pages/ui-features",
+        "children": [{
+            "title": "productType_new",
+            "link": "productType"
+          },
+          {
+            "title": "list_productType",
+            "link": "productType-list"
+          }
+        ]
+      }
+
+
+    ],
+
+    "toolbars": [{
+        "key": "userDetailToolBar",
+        "items": [
+          "&&detailToolBar",
+          "-",
+          {
+            "key": "role",
+            "icon": "perm_identity",
+            "disableExpr": "!host.currentEntity || !host.currentEntity.viewModelId"
+          }
+        ]
+      },
+      "$$toolbar.detailToolBar",
+      "$$toolbar.listToolBar"
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "translateItems": ["material", "toolbar"],
+  "imports": {
+    "$$dataInfo": "./base/data-info.json"
+  },
+  "dataInfo": "$$dataInfo.dataInfo"
+}

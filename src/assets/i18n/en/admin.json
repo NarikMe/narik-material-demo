@@ -1,0 +1,13 @@
+{
+  "list": "List",
+  "userName": "Username",
+  "title": "Title",
+  "isActive": "Active",
+  "role": "Role",
+  "userAccount": "User",
+  "new": "New",
+  "base-data": "Base Data",
+  "mainPage": "Main Page",
+  "role_command_hint": "Roles",
+  "selectRole":"Select Role"
+}
