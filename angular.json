@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "narik-material-starter": {
+    "narik-material-demo": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -25,7 +25,7 @@
                 "plugins": "prepend"
               }
             },
-            "outputPath": "dist/narik-material-starter",
+            "outputPath": "dist/narik-material-demo",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -80,19 +80,19 @@
         "serve": {
           "builder": "@angular-builders/dev-server:generic",
           "options": {
-            "browserTarget": "narik-material-starter:build",
+            "browserTarget": "narik-material-demo:build",
             "proxyConfig": "proxy.config.json"
           },
           "configurations": {
             "production": {
-              "browserTarget": "narik-material-starter:build:production"
+              "browserTarget": "narik-material-demo:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "narik-material-starter:build"
+            "browserTarget": "narik-material-demo:build"
           }
         },
         "test": {
@@ -126,7 +126,7 @@
         }
       }
     },
-    "narik-material-starter-e2e": {
+    "narik-material-demo-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -135,11 +135,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "narik-material-starter:serve"
+            "devServerTarget": "narik-material-demo:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "narik-material-starter:serve:production"
+              "devServerTarget": "narik-material-demo:serve:production"
             }
           }
         },
@@ -155,5 +155,5 @@
       }
     }
   },
-  "defaultProject": "narik-material-starter"
+  "defaultProject": "narik-material-demo"
 }
