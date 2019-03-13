@@ -5,7 +5,6 @@ import { CommonModule, DatePipe } from "@angular/common";
 import { FormsModule } from "@angular/forms";
 import { MatCardModule } from "@angular/material/card";
 import {
-  MatNativeDateModule,
   MAT_DATE_FORMATS,
   NativeDateAdapter,
   DateAdapter
@@ -21,7 +20,7 @@ export const PICK_FORMATS = {
   }
 };
 
-class PickDateAdapter extends NativeDateAdapter {
+export class PickDateAdapter extends NativeDateAdapter {
   format(date: Date, displayFormat: any): string {
     if (displayFormat === "input") {
       return new DatePipe("en-US").transform(date, "yyyy/MM/dd");
