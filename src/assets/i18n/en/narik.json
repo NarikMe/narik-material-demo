@@ -8,7 +8,7 @@
   },
   "info": {
     "submit-succeed": "The information is saved",
-    "delete-confirm": "Aru you sure?"
+    "delete-confirm": "Are you sure?"
   },
   "INVALID_LOGIN": "Invalid username or password"
 }
