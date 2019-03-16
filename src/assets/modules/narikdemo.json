@@ -3,5 +3,12 @@
   "imports": {
     "$$dataInfo": "./base/data-info.json"
   },
-  "dataInfo": "$$dataInfo.dataInfo"
+  "dataInfo": "$$dataInfo.dataInfo",
+  "metaData": {
+    "staticData": [{
+      "key": "custTypeCd",
+      "data": ["I", "B"],
+      "ignoreTranslate": true
+    }]
+  }
 }
