@@ -18,7 +18,7 @@ npm install
 Finally run the demo
 
 ```
-ng server
+ng serve
 ```
 
 Use **admin** as username and **123** as password.
