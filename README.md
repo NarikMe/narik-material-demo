@@ -1,5 +1,5 @@
 # narik-material-demo
-A first draft demo for [**Narik**](http://narik.me "**Narik**") with angular-material
+A first draft demo for [**Narik**](http://narik.me "**Narik**") with [Angular Material](https://material.angular.io/ "angular-material")
 
 
 # Running the demo
