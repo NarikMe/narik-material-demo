@@ -7,7 +7,7 @@
   "metaData": {
     "translateItems": ["admin"],
     "dataInfo": "$$dataInfo.dataInfo",
-    "UiDefaultOptions": ["$$uiDefaults.select"],
+    "uiDefaultOptions": ["$$uiDefaults.select"],
     "entities": [{
         "key": "userAccount",
         "fields": [{
