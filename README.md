@@ -23,7 +23,7 @@ ng serve
 
 Use **admin** as username and **123** as password.
 
-More documentation will be available **asap**.
+More documentation will be available **ASAP**.
 
 [narik.me](http://narik.me "narik.me")
 
