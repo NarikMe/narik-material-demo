@@ -41,7 +41,7 @@
               "node_modules/ionicons/scss/ionicons.scss",
               "node_modules/ngx-toastr/toastr.css",
               "src/styles/styles.scss",
-              "node_modules/narik-ui-material/styles/narik-ui-material.css",
+              "node_modules/narik-ui-material/styles/narik-ui-material.css"
             ],
             "stylePreprocessorOptions": {
               "includePaths": [
