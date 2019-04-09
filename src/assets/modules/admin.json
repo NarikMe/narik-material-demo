@@ -7,7 +7,7 @@
   "metaData": {
     "translateItems": ["admin"],
     "dataInfo": "$$dataInfo.dataInfo",
-    "uiDefaultOptions": ["$$uiDefaults.select"],
+    "uiDefaultOptions": ["$$uiDefaults.select","$$uiDefaults.data-table"],
     "entities": [{
         "key": "userAccount",
         "fields": [{
@@ -76,13 +76,11 @@
           {
             "name": "lastActivityDate",
             "required": false,
-
             "fieldType": "date"
           },
           {
             "name": "pendingBalance",
             "required": false,
-
             "fieldType": "number"
           },
           {
@@ -140,7 +138,6 @@
               "dataKey": "employee",
               "dataProviderKey": "remote"
             },
-
             "fieldType": "select"
           },
           {
