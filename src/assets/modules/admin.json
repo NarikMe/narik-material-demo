@@ -7,10 +7,12 @@
   "metaData": {
     "translateItems": ["admin"],
     "dataInfo": "$$dataInfo.dataInfo",
-    "uiDefaultOptions": ["$$uiDefaults.select","$$uiDefaults.data-table"],
-    "entities": [{
+    "uiDefaultOptions": ["$$uiDefaults.select", "$$uiDefaults.data-table"],
+    "entities": [
+      {
         "key": "userAccount",
-        "fields": [{
+        "fields": [
+          {
             "name": "userName",
             "required": true,
             "fieldType": "text"
@@ -39,7 +41,8 @@
       },
       {
         "key": "role",
-        "fields": [{
+        "fields": [
+          {
             "name": "title",
             "required": true,
             "fieldType": "text"
@@ -57,7 +60,8 @@
       },
       {
         "key": "account",
-        "fields": [{
+        "fields": [
+          {
             "name": "openDate",
             "required": true,
             "fieldType": "date"
@@ -162,7 +166,8 @@
       },
       {
         "key": "accTransaction",
-        "fields": [{
+        "fields": [
+          {
             "name": "amount",
             "required": true,
 
@@ -236,7 +241,8 @@
       },
       {
         "key": "branch",
-        "fields": [{
+        "fields": [
+          {
             "name": "address",
             "required": false,
             "fieldType": "text",
@@ -271,7 +277,8 @@
       },
       {
         "key": "business",
-        "fields": [{
+        "fields": [
+          {
             "name": "incorpDate",
             "required": false,
 
@@ -313,7 +320,8 @@
       },
       {
         "key": "customer",
-        "fields": [{
+        "fields": [
+          {
             "name": "address",
             "required": false,
             "showInList": false,
@@ -335,7 +343,8 @@
             "dataInfo": {
               "dataKey": "custTypeCd",
               "dataProviderKey": "static"
-            }
+            },
+            "options": { "showToolbar": false }
           },
           {
             "name": "fedId",
@@ -360,16 +369,19 @@
       },
       {
         "key": "department",
-        "fields": [{
-          "name": "name",
-          "required": true,
-          "fieldType": "text"
-        }],
+        "fields": [
+          {
+            "name": "name",
+            "required": true,
+            "fieldType": "text"
+          }
+        ],
         "defaultEntity": {}
       },
       {
         "key": "employee",
-        "fields": [{
+        "fields": [
+          {
             "name": "endDate",
             "required": false,
             "order": 4,
@@ -455,7 +467,8 @@
       },
       {
         "key": "individual",
-        "fields": [{
+        "fields": [
+          {
             "name": "birthDate",
             "required": false,
 
@@ -476,7 +489,8 @@
       },
       {
         "key": "officer",
-        "fields": [{
+        "fields": [
+          {
             "name": "endDate",
             "required": false,
             "order": 4,
@@ -523,7 +537,8 @@
       },
       {
         "key": "product",
-        "fields": [{
+        "fields": [
+          {
             "name": "productCd",
             "title": "code",
             "order": 1,
@@ -574,15 +589,18 @@
       },
       {
         "key": "productType",
-        "fields": [{
-          "name": "name",
-          "required": false,
-          "fieldType": "text"
-        }],
+        "fields": [
+          {
+            "name": "name",
+            "required": true,
+            "fieldType": "text"
+          }
+        ],
         "defaultEntity": {}
       }
     ],
-    "views": [{
+    "views": [
+      {
         "key": "userAccount",
         "viewType": "Detail",
         "entity": "userAccount",
@@ -728,11 +746,13 @@
         "entity": "productType"
       }
     ],
-    "menuItems": [{
+    "menuItems": [
+      {
         "title": "userAccount_-_role",
         "icon": "nb-person",
         "link": "/pages/ui-features",
-        "children": [{
+        "children": [
+          {
             "title": "new_userAccount",
             "link": "userAccount"
           },
@@ -754,7 +774,8 @@
         "title": "individual",
         "icon": "nb-keypad",
         "link": "/pages/ui-features",
-        "children": [{
+        "children": [
+          {
             "title": "individual_new",
             "link": "individual"
           },
@@ -769,7 +790,8 @@
         "title": "branch",
         "icon": "nb-keypad",
         "link": "/pages/ui-features",
-        "children": [{
+        "children": [
+          {
             "title": "branch_new",
             "link": "branch"
           },
@@ -784,7 +806,8 @@
         "title": "business",
         "icon": "nb-keypad",
         "link": "/pages/ui-features",
-        "children": [{
+        "children": [
+          {
             "title": "business_new",
             "link": "business"
           },
@@ -799,7 +822,8 @@
         "title": "customer",
         "icon": "nb-keypad",
         "link": "/pages/ui-features",
-        "children": [{
+        "children": [
+          {
             "title": "customer_new",
             "link": "customer"
           },
@@ -814,7 +838,8 @@
         "title": "department",
         "icon": "nb-keypad",
         "link": "/pages/ui-features",
-        "children": [{
+        "children": [
+          {
             "title": "department_new",
             "link": "department"
           },
@@ -829,7 +854,8 @@
         "title": "employee",
         "icon": "nb-keypad",
         "link": "/pages/ui-features",
-        "children": [{
+        "children": [
+          {
             "title": "employee_new",
             "link": "employee"
           },
@@ -844,7 +870,8 @@
         "title": "officer",
         "icon": "nb-keypad",
         "link": "/pages/ui-features",
-        "children": [{
+        "children": [
+          {
             "title": "officer_new",
             "link": "officer"
           },
@@ -858,7 +885,8 @@
         "title": "productType",
         "icon": "nb-keypad",
         "link": "/pages/ui-features",
-        "children": [{
+        "children": [
+          {
             "title": "productType_new",
             "link": "productType"
           },
@@ -872,7 +900,8 @@
         "title": "product",
         "icon": "nb-keypad",
         "link": "/pages/ui-features",
-        "children": [{
+        "children": [
+          {
             "title": "product_new",
             "link": "product"
           },
@@ -886,7 +915,8 @@
         "title": "account",
         "icon": "nb-keypad",
         "link": "/pages/ui-features",
-        "children": [{
+        "children": [
+          {
             "title": "account_new",
             "link": "account"
           },
@@ -900,7 +930,8 @@
         "title": "accTransaction",
         "icon": "nb-keypad",
         "link": "/pages/ui-features",
-        "children": [{
+        "children": [
+          {
             "title": "accTransaction_new",
             "link": "accTransaction"
           },
@@ -912,7 +943,8 @@
       }
     ],
 
-    "toolbars": [{
+    "toolbars": [
+      {
         "key": "userDetailToolBar",
         "items": [
           "&&detailToolBar",
