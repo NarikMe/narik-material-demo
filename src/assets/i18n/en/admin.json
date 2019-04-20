@@ -53,7 +53,6 @@
   "txnDate":"Txn Date",
   "txnTypeCd":"Txn Type",
   "executionBranch":"Execution Branch",
-  "tellerEmp":"Teller Employee"
-
-
+  "tellerEmp":"Teller Employee",
+  "list_customer":"Customer List"
 }

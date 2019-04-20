@@ -36,7 +36,11 @@
 
       },
       "-",
-      "refresh"
+      "refresh",
+      {
+        "key": "close",
+        "hideExpr": "!host.isInDialog"
+      }
     ]
   },
   "addRemoveToolBar": {

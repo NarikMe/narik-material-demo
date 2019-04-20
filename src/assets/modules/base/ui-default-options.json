@@ -8,6 +8,14 @@
       "showToolbar": true
     }
   },
+  "data-table-select": {
+    "key": "data-table-select",
+    "value": {
+      "toolbarKey": "dataSelectToolbar",
+      "toolbarModuleKey": "narik",
+      "showToolbar": true
+    }
+  },
   "data-table": {
     "key": "data-table",
     "value": {

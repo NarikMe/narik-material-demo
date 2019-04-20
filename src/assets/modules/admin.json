@@ -7,7 +7,11 @@
   "metaData": {
     "translateItems": ["admin"],
     "dataInfo": "$$dataInfo.dataInfo",
-    "uiDefaultOptions": ["$$uiDefaults.select", "$$uiDefaults.data-table"],
+    "uiDefaultOptions": [
+      "$$uiDefaults.select",
+      "$$uiDefaults.data-table",
+      "$$uiDefaults.data-table-select"
+    ],
     "entities": [
       {
         "key": "userAccount",
@@ -50,7 +54,6 @@
           {
             "name": "isActive",
             "required": true,
-
             "fieldType": "boolean"
           }
         ],
@@ -281,7 +284,6 @@
           {
             "name": "incorpDate",
             "required": false,
-
             "fieldType": "date"
           },
           {
@@ -306,8 +308,23 @@
               "dataKey": "customer",
               "dataProviderKey": "remote"
             },
-
-            "fieldType": "select"
+            "fieldType": "table-select",
+            "options": {
+              "fields": [
+                {
+                  "label": "title",
+                  "model": "title",
+                  "name": "title",
+                  "options": {}
+                },
+                {
+                  "label": "city",
+                  "model": "city",
+                  "name": "city",
+                  "options": {}
+                }
+              ]
+            }
           },
           {
             "name": "customerTitle",

@@ -4,5 +4,6 @@
   "save_command_hint": "Save",
   "delete_command_hint": "Delete",
   "close_command_hint": "Close",
-  "refresh_command_hint": "Refresh"
+  "refresh_command_hint": "Refresh",
+  "list_command_hint":"List"
 }
