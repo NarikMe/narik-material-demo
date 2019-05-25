@@ -35,14 +35,17 @@ export class LoginViewComponent extends NarikComponent implements OnInit {
   ) {
     super();
     if (this.authenticationService.currentUserValue) {
-      this.onNavigationg = true;
-      this.router.navigateByUrl(
-        this.returnUrl ||
-          findBestRouteAfterLogin(
-            this.router.config,
-            this.authenticationService.currentUserValue.roles
-          )
-      );
+      let matchUrl = "";
+      if (!this.returnUrl) {
+        matchUrl = findBestRouteAfterLogin(
+          this.router.config,
+          this.authenticationService.currentUserValue.roles
+        );
+      }
+      if (matchUrl || this.returnUrl) {
+        this.onNavigationg = true;
+        this.router.navigateByUrl(this.returnUrl || matchUrl);
+      }
     }
   }
 
@@ -57,13 +60,19 @@ export class LoginViewComponent extends NarikComponent implements OnInit {
       this.authenticationService.login(this.loginModel).then(
         (result: LoginResult) => {
           if (result.succeeded) {
-            this.router.navigateByUrl(
-              this.returnUrl ||
-                findBestRouteAfterLogin(
-                  this.router.config,
-                  result.loginedUser.roles
-                )
-            );
+            let matchUrl = "";
+            if (!this.returnUrl) {
+              matchUrl = findBestRouteAfterLogin(
+                this.router.config,
+                result.loginedUser.roles
+              );
+            }
+            if (!matchUrl && !this.returnUrl) {
+              this.isBusy = false;
+              this.dialogService.error("errors.invalid_role");
+            } else {
+              this.router.navigateByUrl(this.returnUrl || matchUrl);
+            }
           } else {
             this.isBusy = false;
             this.dialogService.error(result.errors);
