@@ -1,4 +1,5 @@
 @import '../../../../styles/themes';
+@import '~bootstrap/scss/mixins/breakpoints';
 @import '~@nebular/theme/styles/global/breakpoints';
 
 @include nb-install-component() {
@@ -71,7 +72,7 @@
       @include nb-rtl(border, none);
     }
 
-    .header-container /deep/ ngx-theme-switcher .dropdown-toggle {
+    .header-container ::ng-deep ngx-theme-switcher .dropdown-toggle {
       color: nb-theme(color-white);
       background: transparent;
     }
@@ -93,7 +94,7 @@
     }
   }
 
-  .toggle-layout /deep/ a {
+  .toggle-settings ::ng-deep a {
     display: block;
     text-decoration: none;
     line-height: 1;
@@ -130,13 +131,13 @@
 
   @include keyframes(pulse) {
     0% {
-      box-shadow: 0 0 1px 0 rgba(nb-theme(color-fg-highlight), 0);
+      //box-shadow: 0 0 1px 0 rgba(nb-theme(color-fg-highlight), 0);
     }
     20% {
-      box-shadow: 0 0 3px 10px rgba(nb-theme(color-fg-highlight), 0.4);
+      //box-shadow: 0 0 3px 10px rgba(nb-theme(color-fg-highlight), 0.4);
     }
     100% {
-      box-shadow: 0 0 5px 20px rgba(nb-theme(color-fg-highlight), 0);
+      //box-shadow: 0 0 5px 20px rgba(nb-theme(color-fg-highlight), 0);
     }
   }
 
@@ -154,7 +155,7 @@
 
   @include media-breakpoint-down(md) {
 
-    nb-action:not(.toggle-layout) {
+    nb-action:not(.toggle-settings) {
       border: none;
     }
 
@@ -162,7 +163,7 @@
       display: none;
     }
 
-    .toggle-layout {
+    .toggle-settings {
       padding: 0;
     }
 
@@ -177,7 +178,7 @@
 
   @include media-breakpoint-down(sm) {
 
-    nb-user /deep/ .user-name {
+    nb-user ::ng-deep .user-name {
       display: none;
     }
   }
@@ -190,7 +191,7 @@
       }
     }
 
-    .toggle-layout {
+    .toggle-settings {
       display: none;
     }
 
@@ -198,13 +199,13 @@
       display: none;
     }
 
-    nb-action:not(.toggle-layout) {
+    nb-action:not(.toggle-settings) {
       padding: 0;
     }
   }
 
   @include media-breakpoint-down(xs) {
-    .right /deep/ {
+    .right ::ng-deep {
       display: none;
     }
   }

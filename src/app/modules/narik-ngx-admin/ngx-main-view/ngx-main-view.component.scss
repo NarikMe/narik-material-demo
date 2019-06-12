@@ -1,4 +1,5 @@
-@import "../../../../styles/themes";
+@import '../../../../styles/themes';
+@import '~bootstrap/scss/mixins/breakpoints';
 @import '~@nebular/theme/styles/global/breakpoints';
 
 @include nb-install-component() {
@@ -16,7 +17,7 @@
     &.collapsed {
       width: 0;
 
-      /deep/ .main-container {
+      ::ng-deep .main-container {
         width: 0;
 
         .scrollable {
@@ -26,7 +27,7 @@
       }
     }
 
-    /deep/ .main-container {
+    ::ng-deep .main-container {
       width: $sidebar-width;
       background: nb-theme(color-bg);
       transition: width 0.3s ease;
@@ -43,30 +44,27 @@
   }
 
   nb-sidebar.menu-sidebar {
+
     margin-top: nb-theme(sidebar-header-gap);
 
     @include nb-for-theme(corporate) {
       margin-top: 0;
     }
 
-    /deep/ .main-container {
-      height: calc(
-        #{nb-theme(sidebar-height)} - #{nb-theme(header-height)} - #{nb-theme(
-            sidebar-header-gap
-          )}
-      ) !important;
+    ::ng-deep .main-container {
+      height:
+        calc(#{nb-theme(sidebar-height)} - #{nb-theme(header-height)} - #{nb-theme(sidebar-header-gap)}) !important;
       @include nb-ltr(border-top-right-radius, nb-theme(radius));
       @include nb-rtl(border-top-left-radius, nb-theme(radius));
 
       @include nb-for-theme(corporate) {
         border: 1px solid nb-theme(separator);
-        height: calc(
-          #{nb-theme(sidebar-height)} - #{nb-theme(header-height)}
-        ) !important;
+        height:
+          calc(#{nb-theme(sidebar-height)} - #{nb-theme(header-height)}) !important;
       }
     }
 
-    /deep/ .scrollable {
+    ::ng-deep .scrollable {
       @include nb-for-theme(corporate) {
         padding-top: 0;
 
@@ -76,7 +74,7 @@
       }
     }
 
-    /deep/ nb-sidebar-header {
+    ::ng-deep nb-sidebar-header {
       padding-bottom: 0.5rem;
       text-align: center;
     }
@@ -102,14 +100,14 @@
         @include nb-rtl(padding-right, 0.25rem);
       }
 
-      i,
-      span {
+      i, span {
         vertical-align: middle;
       }
     }
 
     &.compacted {
-      /deep/ nb-sidebar-header {
+
+      ::ng-deep nb-sidebar-header {
         padding-left: 0;
         padding-right: 0;
       }
@@ -128,4 +126,32 @@
     }
   }
 
+  @include media-breakpoint-down(xs) {
+    .main-content {
+      padding: 0.75rem !important;
+
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+
+    nb-sidebar.menu-sidebar {
+
+      margin-top: 0;
+
+      ::ng-deep .main-container {
+        height: calc(#{nb-theme(sidebar-height)} - #{nb-theme(header-height)}) !important;
+        @include nb-ltr(border-top-right-radius, 0);
+        @include nb-rtl(border-top-left-radius, 0);
+
+        .scrollable {
+          padding-top: 0;
+        }
+      }
+    }
+
+    .main-btn {
+      display: none;
+    }
+  }
 }
