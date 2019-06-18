@@ -1,9 +1,7 @@
-import { AuthenticationService, DialogService } from "narik-infrastructure";
+import { AuthenticationService } from "narik-infrastructure";
 import { Component, Input } from "@angular/core";
-import { NbSidebarService, NbMenuItem, NbMenuService } from "@nebular/theme";
+import { NbSidebarService, NbMenuItem } from "@nebular/theme";
 import { TranslateService } from "@ngx-translate/core";
-import { filter } from "rxjs/internal/operators/filter";
-import { map } from "rxjs/internal/operators/map";
 
 @Component({
   selector: "ngx-view-header",

@@ -11,7 +11,8 @@ import {
   NbSearchModule,
   NbSidebarModule,
   NbSidebarService,
-  NbUserModule
+  NbUserModule,
+  NbIconModule
 } from "@nebular/theme";
 import { RouterModule } from "@angular/router";
 
@@ -25,6 +26,7 @@ import { RouterModule } from "@angular/router";
     NbMenuModule.forRoot(),
     NbSearchModule,
     NbSidebarModule,
+    NbIconModule,
     NbUserModule
   ],
   declarations: [COMPONENTS],

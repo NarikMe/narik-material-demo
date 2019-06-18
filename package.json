@@ -43,6 +43,8 @@
     "narik-jwt-authentication": "^2.0.0",
     "narik-ui-core": "^2.0.2",
     "narik-ui-material": "^2.0.2",
+    "roboto-fontface": "^0.10.0",
+    "typeface-exo": "0.0.61",
     "ngforage": "^4.0.3",
     "ngx-toastr": "^10.0.4",
     "rxjs": "~6.5.2",
