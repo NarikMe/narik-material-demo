@@ -1,17 +1,7 @@
+@import "~@coreui/coreui/scss/coreui";
+
 @import "style-font.css";
 
 @import "app-style.css";
 
-@import 'themes';
-
-@import 'mat-custom-styles';
-
-@import '~@nebular/theme/styles/globals';
-
-
-
-@include nb-install() {
-  @include nb-theme-global();
-}
-
-;
+@import "mat-custom-styles";

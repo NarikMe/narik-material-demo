@@ -12,7 +12,7 @@ import { CommonModule } from "@angular/common";
 import { ShareModule } from "../share/share.module";
 import { NarikUiMaterialModule } from "narik-ui-material";
 import { FormsModule } from "@angular/forms";
-import { NarikNgxAdmin } from "../narik-ngx-admin/narik-ngx-admin.module";
+
 import {
   MODULE_UI_KEY,
   MODULE_DATA_KEY,
@@ -22,10 +22,10 @@ import {
 } from "narik-infrastructure";
 import { NarikModule } from "narik-core";
 import { Observable } from "rxjs/internal/Observable";
-import { NbMenuService } from "@nebular/theme";
 import { filter } from "rxjs/internal/operators/filter";
 import { map } from "rxjs/internal/operators/map";
 import { ChangePassComponent } from "../main/change-password/change-password.component";
+import { NarikCoreUiAdmin } from "../narik-coreui-admin/narik-coreui-admin.module";
 
 const moduleKey = "admin";
 const routes: Routes = [
@@ -54,7 +54,7 @@ const routes: Routes = [
     NarikUiMaterialModule,
     NarikAppCoreModule,
     FormsModule,
-    NarikNgxAdmin
+    NarikCoreUiAdmin
   ],
   declarations: [COMPONENTS],
   exports: [],
@@ -72,33 +72,10 @@ const routes: Routes = [
 export class AdminModule extends NarikModule {
   constructor(
     injector: Injector,
-    nbMenuService: NbMenuService,
     authenticationService: AuthenticationService,
     dialogService: DialogService
   ) {
     super(injector);
-    nbMenuService
-      .onItemClick()
-      .pipe(
-        filter(({ tag }) => tag === "user-context-menu"),
-        map(({ item: { data } }) => data)
-      )
-      .subscribe(item => {
-        if (item === "logout") {
-          authenticationService.logout();
-        } else if (item === "changePass") {
-          dialogService.showDialog(
-            ChangePassComponent,
-            undefined,
-            undefined,
-            [],
-            {
-              showBackdrop: true,
-              disableAutoClose: true
-            }
-          );
-        }
-      });
   }
 
   get key() {

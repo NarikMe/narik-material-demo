@@ -10,7 +10,8 @@
     "re-password": "Confirm New Password",
     "change_Pass": "Change Password",
     "userName_placeHolder": "Your Username",
-    "password_placeHolder": "Your Password"
+    "password_placeHolder": "Your Password",
+    "logout":"Logout"
   },
   "search": "Search",
   "management": "Management",

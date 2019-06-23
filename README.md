@@ -1,15 +1,13 @@
-# narik-material-demo
+# narik-material-demo-coreui-admin-template
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/dc206007664d41e8bc0871c2ff8c7815)](https://www.codacy.com/app/abadakhshan/narik-material-demo?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=NarikMe/narik-material-demo&amp;utm_campaign=Badge_Grade)
-
-A demo for [**Narik**](http://narik.me "Narik Angular Framework") with [Angular Material](https://material.angular.io/ "Angular Material")
+A demo for [**Narik**](http://narik.me "Narik Angular Framework") with [Angular Material](https://material.angular.io/ "Angular Material") and [CoreUI for Angular](https://coreui.io/)
 
 ## Running the demo
 
 First of all copy repo to local machine .
 
 ```shell
-git clone  https://github.com/NarikMe/narik-material-demo
+git clone  https://github.com/NarikMe/narik-material-demo-coreui-admin-template
 ```
 
 After  that install dependencies.
