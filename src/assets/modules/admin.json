@@ -766,220 +766,194 @@
     "menuItems": [
       {
         "title": "userAccount_-_role",
-        "icon": "fa fa-user",
-        "link": "/admin/",
+        "icon":"people-outline",
+        "link": "/pages/ui-features",
         "children": [
           {
             "title": "new_userAccount",
-            "link": "userAccount",
-            "icon": "fa fa-file"
+            "link": "userAccount"
           },
           {
             "title": "userAccount_list",
-            "link": "userAccount-list",
-            "icon": "fa fa-list"
+            "link": "userAccount-list"
           },
           {
             "title": "new_role",
-            "link": "role",
-            "icon": "fa fa-file"
+            "link": "role"
           },
           {
             "title": "role_lis",
-            "link": "role-list",
-            "icon": "fa fa-list"
+            "link": "role-list"
           }
         ]
       },
       {
         "title": "individual",
-        "icon": "fa fa-bars",
-        "link": "/admin/",
+        "icon":"menu-outline",
+        "link": "/pages/ui-features",
         "children": [
           {
             "title": "individual_new",
-            "link": "individual",
-            "icon": "fa fa-file"
+            "link": "individual"
           },
           {
             "title": "list_individual",
-            "link": "individual-list",
-            "icon": "fa fa-list"
+            "link": "individual-list"
           }
         ]
       },
       {
         "title": "branch",
-        "icon": "fa fa-bars",
-        "link": "/admin/",
+        "icon":"menu-outline",
+        "link": "/pages/ui-features",
         "children": [
           {
             "title": "branch_new",
-            "link": "branch",
-            "icon": "fa fa-file"
+            "link": "branch"
           },
           {
             "title": "list_branch",
-            "link": "branch-list",
-            "icon": "fa fa-list"
+            "link": "branch-list"
           }
         ]
       },
 
       {
         "title": "business",
-        "icon": "fa fa-bars",
-        "link": "/admin/",
+        "icon":"menu-outline",
+        "link": "/pages/ui-features",
         "children": [
           {
             "title": "business_new",
-            "link": "business",
-            "icon": "fa fa-file"
+            "link": "business"
           },
           {
             "title": "list_business",
-            "link": "business-list",
-            "icon": "fa fa-list"
+            "link": "business-list"
           }
         ]
       },
 
       {
         "title": "customer",
-        "icon": "fa fa-bars",
-        "link": "/admin/",
+        "icon":"menu-outline",
+        "link": "/pages/ui-features",
         "children": [
           {
             "title": "customer_new",
-            "link": "customer",
-            "icon": "fa fa-file"
+            "link": "customer"
           },
           {
             "title": "list_customer",
-            "link": "customer-list",
-            "icon": "fa fa-list"
+            "link": "customer-list"
           }
         ]
       },
 
       {
         "title": "department",
-        "icon": "fa fa-bars",
-        "link": "/admin/",
+        "icon":"menu-outline",
+        "link": "/pages/ui-features",
         "children": [
           {
             "title": "department_new",
-            "link": "department",
-            "icon": "fa fa-file"
+            "link": "department"
           },
           {
             "title": "list_department",
-            "link": "department-list",
-            "icon": "fa fa-list"
+            "link": "department-list"
           }
         ]
       },
 
       {
         "title": "employee",
-        "icon": "fa fa-bars",
-        "link": "/admin/",
+        "icon":"menu-outline",
+        "link": "/pages/ui-features",
         "children": [
           {
             "title": "employee_new",
-            "link": "employee",
-            "icon": "fa fa-file"
+            "link": "employee"
           },
           {
             "title": "list_employee",
-            "link": "employee-list",
-            "icon": "fa fa-list"
+            "link": "employee-list"
           }
         ]
       },
 
       {
         "title": "officer",
-        "icon": "fa fa-bars",
-        "link": "/admin/",
+        "icon":"menu-outline",
+        "link": "/pages/ui-features",
         "children": [
           {
             "title": "officer_new",
-            "link": "officer",
-            "icon": "fa fa-file"
+            "link": "officer"
           },
           {
             "title": "list_officer",
-            "link": "officer-list",
-            "icon": "fa fa-list"
+            "link": "officer-list"
           }
         ]
       },
       {
         "title": "productType",
-        "icon": "fa fa-bars",
-        "link": "/admin/",
+        "icon":"menu-outline",
+        "link": "/pages/ui-features",
         "children": [
           {
             "title": "productType_new",
-            "link": "productType",
-            "icon": "fa fa-file"
+            "link": "productType"
           },
           {
             "title": "list_productType",
-            "link": "productType-list",
-            "icon": "fa fa-list"
+            "link": "productType-list"
           }
         ]
       },
       {
         "title": "product",
-        "icon": "fa fa-bars",
-        "link": "/admin/",
+        "icon":"menu-outline",
+        "link": "/pages/ui-features",
         "children": [
           {
             "title": "product_new",
-            "link": "product",
-            "icon": "fa fa-file"
+            "link": "product"
           },
           {
             "title": "list_product",
-            "link": "product-list",
-            "icon": "fa fa-list"
+            "link": "product-list"
           }
         ]
       },
       {
         "title": "account",
-        "icon": "fa fa-bars",
-        "link": "/admin/",
+        "icon":"menu-outline",
+        "link": "/pages/ui-features",
         "children": [
           {
             "title": "account_new",
-            "link": "account",
-            "icon": "fa fa-file"
+            "link": "account"
           },
           {
             "title": "list_account",
-            "link": "account-list",
-            "icon": "fa fa-list"
+            "link": "account-list"
           }
         ]
       },
       {
         "title": "accTransaction",
-        "icon": "fa fa-bars",
-        "link": "/admin/",
+        "icon":"menu-outline",
+        "link": "/pages/ui-features",
         "children": [
           {
             "title": "accTransaction_new",
-            "link": "accTransaction",
-            "icon": "fa fa-file"
+            "link": "accTransaction"
           },
           {
             "title": "list_accTransaction",
-            "link": "accTransaction-list",
-            "icon": "fa fa-list"
+            "link": "accTransaction-list"
           }
         ]
       }
