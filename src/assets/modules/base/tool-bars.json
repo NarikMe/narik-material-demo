@@ -1,51 +1,64 @@
 {
   "detailToolBar": {
     "key": "detailToolBar",
-    "items": [{
+    "items": [
+      {
         "key": "new",
-        "icon": "add"
+        "icon": "add",
+        "shortcut": "control.alt.n"
       },
       {
         "key": "save",
-        "disableExpr": "host.config.readOnly"
+        "disableExpr": "host.config.readOnly",
+        "shortcut": "control.s"
       },
       {
         "key": "delete",
-        "disableExpr": "host.config.readOnly || !host.currentEntity || !host.currentEntity.viewModelId"
+        "disableExpr": "host.config.readOnly || !host.currentEntity || !host.currentEntity.viewModelId",
+        "shortcut": "control.d"
       },
       {
         "key": "close",
+        "shortcut": "control.x",
         "hideExpr": "!host.isInDialog"
       }
     ]
   },
   "listToolBar": {
     "key": "listToolBar",
-    "items": [{
+    "items": [
+      {
         "key": "new",
         "icon": "add",
+        "shortcut": "control.alt.n",
         "disableExpr": "host.config.readOnly"
       },
       {
         "key": "edit",
+        "shortcut": "control.e",
         "disableExpr": "host.config.readOnly || !host.selectedEntity "
       },
       {
         "key": "delete",
+        "shortcut": "control.d",
         "disableExpr": "host.config.readOnly "
-
       },
       "-",
-      "refresh",
+      {
+        "key": "refresh",
+        "shortcut": "control.r"
+      },
       {
         "key": "close",
+        "shortcut": "control.x",
         "hideExpr": "!host.isInDialog"
       }
     ]
   },
   "addRemoveToolBar": {
     "key": "addRemoveToolBar",
-    "items": [{
+    "items": [
+      {
         "key": "add",
         "icon": "add"
       },
