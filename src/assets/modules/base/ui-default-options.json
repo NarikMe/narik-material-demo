@@ -21,5 +21,17 @@
     "value": {
       "showSearchPanel": true
     }
+  },
+  "button": {
+    "key": "button",
+    "value": {
+      "appendShortcutToTooltip": false
+    }
+  },
+  "toolbar": {
+    "key": "toolbar",
+    "value": {
+      "appendShortcutToTooltip": true
+    }
   }
 }

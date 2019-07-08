@@ -1,15 +1,18 @@
 {
-
   "imports": {
-    "$$dataInfo": "./base/data-info.json"
+    "$$dataInfo": "./base/data-info.json",
+    "$$uiDefaults": "./base/ui-default-options.json"
   },
   "metaData": {
     "translateItems": ["material", "toolbar"],
     "dataInfo": "$$dataInfo.dataInfo",
-    "staticData": [{
-      "key": "custTypeCd",
-      "data": ["I", "B"],
-      "ignoreTranslate": true
-    }]
+    "uiDefaultOptions": ["$$uiDefaults.button"],
+    "staticData": [
+      {
+        "key": "custTypeCd",
+        "data": ["I", "B"],
+        "ignoreTranslate": true
+      }
+    ]
   }
 }
