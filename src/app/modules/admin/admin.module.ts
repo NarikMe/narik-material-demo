@@ -26,6 +26,13 @@ import { NbMenuService } from "@nebular/theme";
 import { filter } from "rxjs/internal/operators/filter";
 import { map } from "rxjs/internal/operators/map";
 import { ChangePassComponent } from "../main/change-password/change-password.component";
+import { DynamicFormService } from "narik-ui-core";
+import { MccColorPickerModule } from "material-community-components";
+import { NarikCommonModule } from "narik-common";
+import { MatIconModule } from "@angular/material/icon";
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatInputModule } from "@angular/material/input";
+import { ColorPickerComponent } from "./color-picker/color-picker.component";
 
 const moduleKey = "admin";
 const routes: Routes = [
@@ -54,10 +61,19 @@ const routes: Routes = [
     NarikUiMaterialModule,
     NarikAppCoreModule,
     FormsModule,
-    NarikNgxAdmin
+    NarikNgxAdmin,
+    NarikCommonModule,
+    MatIconModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MccColorPickerModule.forRoot({
+      used_colors: ["#000000", "#123456", "#777666"],
+      empty_color: "transparent"
+    })
   ],
   declarations: [COMPONENTS],
   exports: [],
+  entryComponents: [ColorPickerComponent],
   providers: [
     {
       provide: MODULE_UI_KEY,
@@ -74,9 +90,11 @@ export class AdminModule extends NarikModule {
     injector: Injector,
     nbMenuService: NbMenuService,
     authenticationService: AuthenticationService,
-    dialogService: DialogService
+    dialogService: DialogService,
+    dfs: DynamicFormService
   ) {
     super(injector);
+    dfs.addDynamicFormComponent("color", ColorPickerComponent);
     nbMenuService
       .onItemClick()
       .pipe(

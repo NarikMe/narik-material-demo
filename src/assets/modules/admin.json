@@ -16,6 +16,24 @@
     ],
     "entities": [
       {
+        "key": "testColor",
+        "fields": [
+          {
+            "name": "title",
+            "required": true,
+            "fieldType": "text"
+          },
+          {
+            "name": "color",
+            "required": true,
+            "fieldType": "color"
+          }
+        ],
+        "defaultEntity": {
+          "color": "#FFFFFF"
+        }
+      },
+      {
         "key": "userAccount",
         "fields": [
           {
@@ -620,6 +638,11 @@
     ],
     "views": [
       {
+        "key": "testColor",
+        "viewType": "Detail",
+        "entity": "testColor"
+      },
+      {
         "key": "userAccount",
         "viewType": "Detail",
         "entity": "userAccount",
@@ -766,6 +789,10 @@
       }
     ],
     "menuItems": [
+      {
+        "title": "CRUD SAMPLES",
+        "group": true
+      },
       {
         "title": "userAccount_-_role",
         "icon": "people-outline",
@@ -958,6 +985,15 @@
             "link": "accTransaction-list"
           }
         ]
+      },
+      {
+        "title": "FEATURE SAMPLES",
+        "group": true
+      },
+      {
+        "icon": "menu-outline",
+        "title": "testColor",
+        "link": "testColor"
       }
     ],
 
