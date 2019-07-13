@@ -17,6 +17,7 @@
     "viewOptions": {
       "detailNavigationType": "dialog"
     },
+
     "entities": [
       {
         "key": "testColor",
