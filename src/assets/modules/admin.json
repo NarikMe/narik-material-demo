@@ -14,6 +14,9 @@
       "$$uiDefaults.button",
       "$$uiDefaults.toolbar"
     ],
+    "viewOptions": {
+      "detailNavigationType": "dialog"
+    },
     "entities": [
       {
         "key": "testColor",
@@ -694,7 +697,10 @@
       {
         "key": "branch-list",
         "viewType": "List",
-        "entity": "branch"
+        "entity": "branch",
+        "options": {
+          "detailNavigationType": "route"
+        }
       },
 
       {
