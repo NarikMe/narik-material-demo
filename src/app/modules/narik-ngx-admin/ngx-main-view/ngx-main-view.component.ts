@@ -1,9 +1,14 @@
 import { NarikTranslateService } from "narik-core";
-import { NarikComponent } from "narik-infrastructure";
+import {
+  NarikComponent,
+  FormTitleResolver,
+  MODULE_UI_KEY,
+  MetaDataService
+} from "narik-infrastructure";
 import { filter } from "rxjs/internal/operators/filter";
 import { map } from "rxjs/internal/operators/map";
 
-import { Component, Input, OnInit } from "@angular/core";
+import { Component, Input, OnInit, Injector } from "@angular/core";
 import { Title } from "@angular/platform-browser";
 import { ActivatedRoute, NavigationEnd, Router } from "@angular/router";
 import { NbMenuItem } from "@nebular/theme";
@@ -17,7 +22,7 @@ import { takeWhile } from "rxjs/internal/operators/takeWhile";
 export class NgxMainViewComponent extends NarikComponent implements OnInit {
   _menuItems: NbMenuItem[];
   title: string;
-
+  defaultNavigationProvider = "route";
   _translateMenu = true;
   set translateMenu(value: boolean) {
     this._translateMenu = value;
@@ -40,10 +45,24 @@ export class NgxMainViewComponent extends NarikComponent implements OnInit {
   constructor(
     private translateService: NarikTranslateService,
     router: Router,
+    injector: Injector,
+    metaDataService: MetaDataService,
     activatedRoute: ActivatedRoute,
+    private formTitleResolver: FormTitleResolver,
     private titleService: Title
   ) {
     super();
+
+    const moduleUiKey = injector.get(MODULE_UI_KEY);
+    const viewOptions = metaDataService.getValue<any>(
+      moduleUiKey,
+      "viewOptions"
+    );
+
+    if (viewOptions && viewOptions.defaultNavigationProvider) {
+      this.defaultNavigationProvider = viewOptions.defaultNavigationProvider;
+    }
+
     router.events
       .pipe(
         filter(event => event instanceof NavigationEnd),
@@ -58,19 +77,11 @@ export class NgxMainViewComponent extends NarikComponent implements OnInit {
         takeWhile(x => this.isAlive)
       )
       .subscribe(ar => {
-        const title =
-          (ar.snapshot.data && ar.snapshot.data.title) ||
-          (ar.snapshot.url[0] && ar.snapshot.url[0].path);
-        if (title) {
-          this.title = this.translateService.instant(this.getFirst(title));
-          this.titleService.setTitle(this.title);
-        }
+        this.title = this.formTitleResolver.resolveTitle(ar.snapshot);
+        this.titleService.setTitle(this.title);
       });
   }
 
-  getFirst(title: string): string {
-    return title ? title.split("-")[0] : "";
-  }
   ngOnInit() {
     if (this.menuItems && this.translateMenu) {
       this.translateMenuTitles(this.menuItems);

@@ -5,22 +5,18 @@
 
 
   <nb-sidebar class="menu-sidebar" tag="menu-sidebar" responsive>
-    <!-- <nb-sidebar-header >
-      <a  class="btn btn-hero-success main-btn">
-        <i class="nb-menu"></i> <span>{{menuHeader}}</span>
-      </a>
-    </nb-sidebar-header> -->
     <nb-menu [items]="menuItems"></nb-menu>
   </nb-sidebar>
 
 
   <nb-layout-column>
     <nb-card>
-      <nb-card-header>
+      <nb-card-header *ngIf="defaultNavigationProvider==='route'">
         {{title}}
       </nb-card-header>
       <nb-card-body>
-        <router-outlet></router-outlet>
+        <narik-tab-outlet *ngIf="defaultNavigationProvider==='tab'"></narik-tab-outlet>
+        <router-outlet *ngIf="defaultNavigationProvider==='route'"></router-outlet>
       </nb-card-body>
     </nb-card>
   </nb-layout-column>

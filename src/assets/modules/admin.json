@@ -15,9 +15,9 @@
       "$$uiDefaults.toolbar"
     ],
     "viewOptions": {
-      "detailNavigationType": "dialog"
+      "detailNavigationProvider": "dialog",
+      "defaultNavigationProvider": "route"
     },
-
     "entities": [
       {
         "key": "testColor",
@@ -700,7 +700,7 @@
         "viewType": "List",
         "entity": "branch",
         "options": {
-          "detailNavigationType": "route"
+          "detailNavigationProvider": "dialog"
         }
       },
 

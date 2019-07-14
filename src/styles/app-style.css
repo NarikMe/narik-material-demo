@@ -19,3 +19,4 @@ nb-layout-header.fixed {
 [dir=rtl] .layout-container nb-sidebar.left {
   order: initial !important;
 }
+

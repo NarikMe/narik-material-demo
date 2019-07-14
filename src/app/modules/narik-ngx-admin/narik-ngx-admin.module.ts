@@ -1,24 +1,27 @@
+import { NarikMatTabOutletModule } from "narik-ui-material";
+
+import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
-
-import { COMPONENTS } from "./index";
-
+import { RouterModule } from "@angular/router";
 import {
   NbActionsModule,
   NbCardModule,
   NbContextMenuModule,
+  NbIconModule,
   NbLayoutModule,
   NbMenuModule,
   NbSearchModule,
   NbSidebarModule,
   NbSidebarService,
-  NbUserModule,
-  NbIconModule
+  NbUserModule
 } from "@nebular/theme";
-import { RouterModule } from "@angular/router";
+
+import { COMPONENTS } from "./index";
 
 @NgModule({
   imports: [
     RouterModule,
+    CommonModule,
     NbActionsModule,
     NbCardModule,
     NbContextMenuModule,
@@ -27,7 +30,8 @@ import { RouterModule } from "@angular/router";
     NbSearchModule,
     NbSidebarModule,
     NbIconModule,
-    NbUserModule
+    NbUserModule,
+    NarikMatTabOutletModule
   ],
   declarations: [COMPONENTS],
   exports: [COMPONENTS],

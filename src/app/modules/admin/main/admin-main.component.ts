@@ -1,7 +1,4 @@
-import {
-  MetaDataService,
-  MODULE_UI_KEY
-} from "narik-infrastructure";
+import { MetaDataService, MODULE_UI_KEY } from "narik-infrastructure";
 
 import { Component, Inject } from "@angular/core";
 import { NbMenuItem } from "@nebular/theme";
@@ -12,9 +9,6 @@ import { NbMenuItem } from "@nebular/theme";
 export class AdminMainComponent {
   menuItems: NbMenuItem[];
 
-  /**
-   *
-   */
   constructor(
     metaDataService: MetaDataService,
     @Inject(MODULE_UI_KEY) moduleKey: string
