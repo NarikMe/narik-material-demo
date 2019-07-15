@@ -45,7 +45,11 @@ const routes: Routes = [
       {
         path: "",
         children: [
-          { path: "", component: AdminMainViewComponent },
+          {
+            path: "",
+            component: AdminMainViewComponent,
+            data: { title: "dashboard" }
+          },
           ...FormViewRoute(moduleKey)
         ]
       }

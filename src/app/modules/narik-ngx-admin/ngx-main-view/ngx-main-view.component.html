@@ -2,21 +2,17 @@
   <nb-layout-header fixed>
     <ngx-view-header [headerTitle]='headerTitle' [position]="'normal'"></ngx-view-header>
   </nb-layout-header>
-
-
   <nb-sidebar class="menu-sidebar" tag="menu-sidebar" responsive>
     <nb-menu [items]="menuItems"></nb-menu>
   </nb-sidebar>
-
-
   <nb-layout-column>
     <nb-card>
-      <nb-card-header *ngIf="defaultNavigationProvider==='route'">
+      <nb-card-header *ngIf="navigationType==='route'">
         {{title}}
       </nb-card-header>
       <nb-card-body>
-        <narik-tab-outlet *ngIf="defaultNavigationProvider==='tab'"></narik-tab-outlet>
-        <router-outlet *ngIf="defaultNavigationProvider==='route'"></router-outlet>
+        <narik-tab-outlet *ngIf="navigationType==='tab'"></narik-tab-outlet>
+        <router-outlet *ngIf="navigationType==='route'"></router-outlet>
       </nb-card-body>
     </nb-card>
   </nb-layout-column>

@@ -19,12 +19,18 @@ const routes: Routes = [
     path: "admin",
     data: { authorizeTag: ["1"] },
     canActivate: [UserIsAuthenticatedGuard, UserIsAuthorizedGuard],
-    loadChildren: "./modules/admin/admin.module#AdminModule"
+    loadChildren: () =>
+      import("./modules/admin/admin.module").then(m => m.AdminModule)
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes, {
+      // You should set onSameUrlNavigation to "reload" if you want to use "tab" outlet.
+      // onSameUrlNavigation: "reload"
+    })
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule {}

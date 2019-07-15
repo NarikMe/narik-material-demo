@@ -22,14 +22,18 @@ import { takeWhile } from "rxjs/internal/operators/takeWhile";
 export class NgxMainViewComponent extends NarikComponent implements OnInit {
   _menuItems: NbMenuItem[];
   title: string;
-  defaultNavigationProvider = "route";
   _translateMenu = true;
+
+  @Input()
   set translateMenu(value: boolean) {
     this._translateMenu = value;
   }
   get translateMenu(): boolean {
     return this._translateMenu;
   }
+
+  @Input()
+  navigationType = "route";
 
   @Input()
   set menuItems(value: NbMenuItem[]) {
@@ -58,10 +62,6 @@ export class NgxMainViewComponent extends NarikComponent implements OnInit {
       moduleUiKey,
       "viewOptions"
     );
-
-    if (viewOptions && viewOptions.defaultNavigationProvider) {
-      this.defaultNavigationProvider = viewOptions.defaultNavigationProvider;
-    }
 
     router.events
       .pipe(
