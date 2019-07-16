@@ -1,0 +1,84 @@
+{
+  "imports": {
+    "$$toolbar": "./base/tool-bars.json",
+    "$$uiDefaults": "./base/ui-default-options.json",
+    "$$shareValues": "./base/share-values.json"
+  },
+  "metaData": {
+    "translateItems": ["sale"],
+    "uiDefaultOptions": [
+      {
+        "key": "select",
+        "value": {
+          "toolbarKey": "selectToolbar",
+          "toolbarModuleKey": "narik",
+          "showSearchBox": true,
+          "showToolbar": false
+        }
+      },
+      "$$uiDefaults.data-table",
+      "$$uiDefaults.data-table-select",
+      "$$uiDefaults.button",
+      "$$uiDefaults.toolbar"
+    ],
+    "viewOptions": {
+      "detailNavigationProvider": "default"
+    },
+    "entities": [
+      {
+        "key": "sale",
+        "fields": [
+          {
+            "name": "branchId",
+            "required": true,
+            "title": "branch",
+            "fieldType": "select",
+            "dataInfo": {
+              "dataKey": "branch",
+              "dataProviderKey": "remote"
+            }
+          },
+          {
+            "name": "productId",
+            "required": true,
+            "title": "product",
+            "fieldType": "select",
+            "dataInfo": {
+              "dataKey": "product",
+              "dataProviderKey": "remote"
+            }
+          }
+        ]
+      }
+    ],
+    "views": [
+      {
+        "key": "sale",
+        "viewType": "Detail",
+        "entity": "sale"
+      },
+      {
+        "key": "sale-list",
+        "viewType": "List",
+        "entity": "sale"
+      }
+    ],
+    "menuItems": [
+      {
+        "title": "sale",
+        "icon": "menu-outline",
+        "children": [
+          {
+            "title": "sale_new",
+            "link": "sale"
+          },
+          {
+            "title": "list_sale",
+            "link": "sale-list"
+          }
+        ]
+      }
+    ],
+    "toolbars": ["$$toolbar.detailToolBar", "$$toolbar.listToolBar"]
+  }
+}

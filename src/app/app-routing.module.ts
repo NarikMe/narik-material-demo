@@ -21,6 +21,12 @@ const routes: Routes = [
     canActivate: [UserIsAuthenticatedGuard, UserIsAuthorizedGuard],
     loadChildren: () =>
       import("./modules/admin/admin.module").then(m => m.AdminModule)
+  },
+  {
+    path: "sale",
+    canActivate: [UserIsAuthorizedGuard],
+    loadChildren: () =>
+      import("./modules/sale/sale.module").then(m => m.SaleModule)
   }
 ];
 

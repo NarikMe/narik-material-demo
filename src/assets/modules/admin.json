@@ -2,7 +2,8 @@
   "imports": {
     "$$dataInfo": "./base/data-info.json",
     "$$toolbar": "./base/tool-bars.json",
-    "$$uiDefaults": "./base/ui-default-options.json"
+    "$$uiDefaults": "./base/ui-default-options.json",
+    "$$shareValues": "./base/share-values.json"
   },
   "metaData": {
     "translateItems": ["admin"],
@@ -15,7 +16,7 @@
       "$$uiDefaults.toolbar"
     ],
     "viewOptions": {
-      "detailNavigationProvider": "dialog"
+      "detailNavigationProvider": "$$shareValues.dialogNavigationProvider"
     },
     "entities": [
       {
@@ -1000,7 +1001,17 @@
         "icon": "menu-outline",
         "title": "testColor",
         "link": "testColor"
+      },
+      {
+        "title": "SAMPLE MODULES",
+        "group": true
+      },
+      {
+        "icon": "menu-outline",
+        "title": "sale",
+        "link": "../sale"
       }
+
     ],
 
     "toolbars": [
