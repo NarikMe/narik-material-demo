@@ -1,3 +1,4 @@
+import { WidgetViewComponent } from "./widgets/widget-view/widget-view.component";
 import { COMPONENTS } from "./index";
 import { NgModule, Injector } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
@@ -49,6 +50,10 @@ const routes: Routes = [
             path: "",
             component: AdminMainViewComponent,
             data: { title: "dashboard" }
+          },
+          {
+            path: "widgets",
+            component: WidgetViewComponent
           },
           ...FormViewRoute(moduleKey)
         ]

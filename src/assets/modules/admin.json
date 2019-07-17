@@ -1124,6 +1124,11 @@
         "link": "testColor"
       },
       {
+        "icon": "menu-outline",
+        "title": "widgets",
+        "link": "widgets"
+      },
+      {
         "title": "SAMPLE MODULES",
         "group": true
       },

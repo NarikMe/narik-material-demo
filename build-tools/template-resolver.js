@@ -11,6 +11,11 @@ class TemplateResolver {
           template: "",
           templateUrl: "./src/app/templates/detail-template.html"
         };
+      case "widget":
+        return {
+          template: "",
+          templateUrl: "./src/app/templates/widget-template.html"
+        };
 
       default:
         break;
