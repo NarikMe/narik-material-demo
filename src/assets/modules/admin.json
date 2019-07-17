@@ -20,6 +20,113 @@
     },
     "entities": [
       {
+        "key": "testDynamicForm",
+        "fields": [
+          {
+            "name": "field1",
+            "title": "MyField",
+            "fieldType": "text"
+          },
+          {
+            "name": "field2",
+            "fieldType": "number",
+            "required": true,
+            "hideExpr": "host.currentEntity.field1==='hide'",
+            "disableExpr": "host.currentEntity.field1==='disable'",
+            "validators": ["min", "max"],
+            "validatorParams": {
+              "min": 25,
+              "max": 100
+            }
+          },
+          {
+            "name": "field3",
+            "fieldType": "time"
+          },
+          {
+            "name": "field4",
+            "fieldType": "textArea"
+          },
+          {
+            "name": "field5",
+            "fieldType": "password"
+          },
+          {
+            "name": "field6",
+            "fieldType": "boolean"
+          },
+          {
+            "name": "field7",
+            "fieldType": "date"
+          },
+          {
+            "name": "field8",
+            "fieldType": "select",
+            "dataInfo": {
+              "dataKey": "branch"
+            }
+          },
+          {
+            "name": "field9",
+            "fieldType": "autoComplete",
+            "dataInfo": {
+              "dataKey": "branch"
+            },
+            "options": {
+              "minSearchLength": 2
+            }
+          },
+          {
+            "name": "field10",
+            "fieldType": "radio",
+            "dataInfo": {
+              "dataKey": "branch"
+            },
+            "options": {
+              "groupIndex": 1
+            }
+          },
+          {
+            "name": "field1",
+            "fieldType": "checkList",
+            "dataInfo": {
+              "dataKey": "branch"
+            },
+            "options": {
+              "groupIndex": 1
+            }
+          },
+          {
+            "name": "field1",
+            "fieldType": "table-select",
+            "dataInfo": {
+              "dataKey": "customer"
+            },
+            "options": {
+              "isLazyLoadData": true,
+              "fields": [
+                {
+                  "label": "title",
+                  "model": "title",
+                  "name": "title",
+                  "options": {}
+                },
+                {
+                  "label": "city",
+                  "model": "city",
+                  "name": "city",
+                  "options": {}
+                }
+              ]
+            }
+          },
+          {
+            "name": "field12",
+            "fieldType": "color"
+          }
+        ]
+      },
+      {
         "key": "testColor",
         "fields": [
           {
@@ -642,6 +749,15 @@
     ],
     "views": [
       {
+        "key": "testDynamicForm",
+        "viewType": "Detail",
+        "entity": "testDynamicForm",
+        "options": {
+          "columnsCount": 2,
+          "groupFields": true
+        }
+      },
+      {
         "key": "testColor",
         "viewType": "Detail",
         "entity": "testColor"
@@ -999,6 +1115,11 @@
       },
       {
         "icon": "menu-outline",
+        "title": "testDynamicForm",
+        "link": "testDynamicForm"
+      },
+      {
+        "icon": "menu-outline",
         "title": "testColor",
         "link": "testColor"
       },
@@ -1011,7 +1132,6 @@
         "title": "sale",
         "link": "../sale"
       }
-
     ],
 
     "toolbars": [

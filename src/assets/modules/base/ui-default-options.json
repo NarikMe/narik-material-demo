@@ -19,7 +19,8 @@
   "data-table": {
     "key": "data-table",
     "value": {
-      "showSearchPanel": true
+      "showSearchPanel": true,
+      "showSearchFields": true
     }
   },
   "button": {

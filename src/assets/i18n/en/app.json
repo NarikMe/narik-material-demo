@@ -14,6 +14,9 @@
   },
   "search": "Search",
   "management": "Management",
-  "menu": "Menu"
-
+  "menu": "Menu",
+  "errors": {
+    "min": "The minimum value for {0} is {1}",
+    "max": "The maximum value for {0} is {1}"
+  }
 }

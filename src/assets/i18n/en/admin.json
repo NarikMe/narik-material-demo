@@ -59,5 +59,6 @@
     "DUPLICATE_USER_NAME": "The user name is duplicate",
     "ADMIN_IS_NOT_EDITABLE": "Admin user is not editable!"
   },
-  "testColor":"Custom Component(Color)"
+  "testColor":"Custom Component(Color)",
+  "testDynamicForm":"Test Dynamic Form"
 }
