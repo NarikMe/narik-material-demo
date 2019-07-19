@@ -20,6 +20,17 @@
     },
     "entities": [
       {
+        "key": "customEntity",
+        "fields": [
+          {
+            "name": "fName"
+          },
+          {
+            "name": "lName"
+          }
+        ]
+      },
+      {
         "key": "testDynamicForm",
         "fields": [
           {
@@ -749,6 +760,12 @@
     ],
     "views": [
       {
+        "key": "customEntity",
+        "viewType": "Detail",
+        "entity": "customEntity",
+        "component": "CustomEntityDetailComponent"
+      },
+      {
         "key": "testDynamicForm",
         "viewType": "Detail",
         "entity": "testDynamicForm",
@@ -1127,6 +1144,11 @@
         "icon": "menu-outline",
         "title": "widgets",
         "link": "widgets"
+      },
+      {
+        "icon": "menu-outline",
+        "title": "Custom Entity",
+        "link": "customEntity"
       },
       {
         "title": "SAMPLE MODULES",
