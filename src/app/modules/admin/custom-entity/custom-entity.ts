@@ -18,6 +18,16 @@ export class CustomEntity {
   }
 
   get fullName(): string {
-    return (this.fName || "") + (this.lName || "");
+    return `${this.fName || ""} ${this.lName || ""}`;
+  }
+
+  // TODO: https://github.com/Microsoft/TypeScript/issues/16858
+  // TODO: http://choly.ca/post/typescript-json/
+  toJSON() {
+    return {
+      lName: this.lName,
+      fName: this.fName,
+      viewModelId: this.viewModelId
+    };
   }
 }

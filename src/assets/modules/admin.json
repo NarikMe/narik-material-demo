@@ -766,6 +766,11 @@
         "component": "CustomEntityDetailComponent"
       },
       {
+        "key": "customEntity-list",
+        "viewType": "List",
+        "entity": "customEntity"
+      },
+      {
         "key": "testDynamicForm",
         "viewType": "Detail",
         "entity": "testDynamicForm",
@@ -1146,9 +1151,18 @@
         "link": "widgets"
       },
       {
+        "title": "customEntity",
         "icon": "menu-outline",
-        "title": "Custom Entity",
-        "link": "customEntity"
+        "children": [
+          {
+            "title": "customEntity_new",
+            "link": "customEntity"
+          },
+          {
+            "title": "list_customEntity",
+            "link": "customEntity-list"
+          }
+        ]
       },
       {
         "title": "SAMPLE MODULES",
