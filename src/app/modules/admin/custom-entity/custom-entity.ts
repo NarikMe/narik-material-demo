@@ -1,7 +1,17 @@
+import { AdaptClass } from "data-adapter";
+import { AdaptMethods } from "narik-common";
+import { Contains, Length, IsEmail } from "class-validator";
+
+@AdaptClass({
+  name: AdaptMethods.PropertyNames
+})
 export class CustomEntity {
   viewModelId: number;
 
   _lName: string;
+
+  @Length(10, 20)
+  @IsEmail()
   set lName(value: string) {
     this._lName = value;
   }
@@ -10,6 +20,8 @@ export class CustomEntity {
   }
 
   _fName: string;
+
+  @Contains("hello")
   set fName(value: string) {
     this._fName = value;
   }
@@ -19,15 +31,5 @@ export class CustomEntity {
 
   get fullName(): string {
     return `${this.fName || ""} ${this.lName || ""}`;
-  }
-
-  // TODO: https://github.com/Microsoft/TypeScript/issues/16858
-  // TODO: http://choly.ca/post/typescript-json/
-  toJSON() {
-    return {
-      lName: this.lName,
-      fName: this.fName,
-      viewModelId: this.viewModelId
-    };
   }
 }

@@ -31,6 +31,17 @@
         ]
       },
       {
+        "key": "classValidation",
+        "fields": [
+          {
+            "name": "email"
+          },
+          {
+            "name": "hello"
+          }
+        ]
+      },
+      {
         "key": "testDynamicForm",
         "fields": [
           {
@@ -760,6 +771,12 @@
     ],
     "views": [
       {
+        "key": "classValidation",
+        "viewType": "Detail",
+        "entity": "classValidation",
+        "component": "ClassValidationDetailComponent"
+      },
+      {
         "key": "customEntity",
         "viewType": "Detail",
         "entity": "customEntity",
@@ -1149,6 +1166,11 @@
         "icon": "menu-outline",
         "title": "widgets",
         "link": "widgets"
+      },
+      {
+        "icon": "menu-outline",
+        "title": "classValidation",
+        "link": "classValidation"
       },
       {
         "title": "customEntity",

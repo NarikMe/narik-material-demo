@@ -2,6 +2,8 @@ import { Component, Injector } from "@angular/core";
 import { NarikDetailForm } from "narik-app-core";
 import { CustomEntity } from "./custom-entity";
 import { NarikBaseTemplate } from "narik-core";
+import { validate, ValidationError } from "class-validator";
+import { formatString } from "narik-common";
 
 @NarikBaseTemplate("NarikDetailUi")
 @Component({

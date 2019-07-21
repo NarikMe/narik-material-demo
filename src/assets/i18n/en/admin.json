@@ -63,5 +63,8 @@
   "testDynamicForm":"Test Dynamic Form",
   "customEntity":"Custom Entity",
   "lName":"Last Name",
-  "fName":"First Name"
+  "fName":"First Name",
+  "classValidation":"Class Validation Sample",
+  "email":"Email",
+  "hello":"Hello Content"
 }

@@ -5,16 +5,18 @@ import { AdminMainViewComponent } from "./main-view/admin-main-view.component";
 import { AdminMainComponent } from "./main/admin-main.component";
 import { ColorPickerComponent } from "./color-picker/color-picker.component";
 import { CustomEntityDetailComponent } from "./custom-entity/custom-entity-detail.component";
+import { ClassValidationDetailComponent } from "./class-validation-sample/class-validation-sample-detail.component";
 
 export const COMPONENTS: Provider[] = [
   AdminMainViewComponent,
   AdminMainComponent,
   CustomEntityDetailComponent,
   ColorPickerComponent,
+  ClassValidationDetailComponent,
   ...WIDGET_COMPONENTS
 ];
 
 export const ENTRY_COMPONENTS: Provider[] = [
-  ...WIDGET_COMPONENTS,
-  CustomEntityDetailComponent
+  CustomEntityDetailComponent,
+  ClassValidationDetailComponent
 ];
