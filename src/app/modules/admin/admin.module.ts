@@ -1,5 +1,5 @@
 import { WidgetViewComponent } from "./widgets/widget-view/widget-view.component";
-import { COMPONENTS } from "./index";
+import { COMPONENTS, ENTRY_COMPONENTS } from "./index";
 import { NgModule, Injector } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { AdminMainComponent } from "./main/admin-main.component";
@@ -34,6 +34,7 @@ import { MatIconModule } from "@angular/material/icon";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { ColorPickerComponent } from "./color-picker/color-picker.component";
+import { MatCardModule } from "@angular/material/card";
 
 const moduleKey = "admin";
 const routes: Routes = [
@@ -75,6 +76,7 @@ const routes: Routes = [
     MatIconModule,
     MatFormFieldModule,
     MatInputModule,
+    MatCardModule,
     MccColorPickerModule.forRoot({
       used_colors: ["#000000", "#123456", "#777666"],
       empty_color: "transparent"
@@ -82,7 +84,7 @@ const routes: Routes = [
   ],
   declarations: [COMPONENTS],
   exports: [],
-  entryComponents: [ColorPickerComponent],
+  entryComponents: [ColorPickerComponent, ENTRY_COMPONENTS],
   providers: [
     {
       provide: MODULE_UI_KEY,

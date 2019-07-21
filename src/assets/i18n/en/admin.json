@@ -60,5 +60,8 @@
     "ADMIN_IS_NOT_EDITABLE": "Admin user is not editable!"
   },
   "testColor":"Custom Component(Color)",
-  "testDynamicForm":"Test Dynamic Form"
+  "testDynamicForm":"Test Dynamic Form",
+  "customEntity":"Custom Entity",
+  "lName":"Last Name",
+  "fName":"First Name"
 }

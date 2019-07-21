@@ -20,6 +20,17 @@
     },
     "entities": [
       {
+        "key": "customEntity",
+        "fields": [
+          {
+            "name": "fName"
+          },
+          {
+            "name": "lName"
+          }
+        ]
+      },
+      {
         "key": "testDynamicForm",
         "fields": [
           {
@@ -749,6 +760,17 @@
     ],
     "views": [
       {
+        "key": "customEntity",
+        "viewType": "Detail",
+        "entity": "customEntity",
+        "component": "CustomEntityDetailComponent"
+      },
+      {
+        "key": "customEntity-list",
+        "viewType": "List",
+        "entity": "customEntity"
+      },
+      {
         "key": "testDynamicForm",
         "viewType": "Detail",
         "entity": "testDynamicForm",
@@ -1127,6 +1149,20 @@
         "icon": "menu-outline",
         "title": "widgets",
         "link": "widgets"
+      },
+      {
+        "title": "customEntity",
+        "icon": "menu-outline",
+        "children": [
+          {
+            "title": "customEntity_new",
+            "link": "customEntity"
+          },
+          {
+            "title": "list_customEntity",
+            "link": "customEntity-list"
+          }
+        ]
       },
       {
         "title": "SAMPLE MODULES",

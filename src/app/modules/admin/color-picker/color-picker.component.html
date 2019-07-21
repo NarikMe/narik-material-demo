@@ -1,6 +1,6 @@
 <mat-form-field [ngClass]="cssClass" [floatLabel]='floatLabel' [appearance]='appearance' [hintLabel]='hintLabel'>
   <mat-label *ngIf="field.label">{{field.label | translate}}</mat-label>
-  <input [disabled]="field.disableExpr && disableItems[field.name]" [narikValidatorParams]="field.validatorParams"
+  <input [narikValidatorParams]="field.validatorParams"
     [narikValidator]="field.validators" [name]="field.name" matInput mccColorPickerOrigin
     #trigger="mccColorPickerOrigin" [required]="field.required" [(ngModel)]='model[field.model]'
     placeholder="{{field.options.placeHolder | translate}}">

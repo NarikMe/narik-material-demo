@@ -8,7 +8,7 @@ import { NarikMatFormFieldInput } from "narik-ui-material";
 })
 export class ColorPickerComponent extends NarikMatFormFieldInput
   implements OnInit, DynamicFormComponent {
-  field: NarikViewField | EntityField = {
+  field: NarikViewField = {
     model: "",
     options: {}
   };
