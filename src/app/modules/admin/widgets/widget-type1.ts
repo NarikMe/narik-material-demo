@@ -2,12 +2,12 @@ import { NarikBaseTemplate } from "narik-core";
 import { Widget } from "./base-widget";
 import { Component } from "@angular/core";
 
-@NarikBaseTemplate("widget")
+@NarikBaseTemplate("widget2")
 @Component({
   selector: "widget-type1",
   template: `
   <ng-template #widgetContent>
-    Hi! I'm Widget of type 3!
+    Hi! I'm Widget of type 1!
 
     <div>counter: {{ counter }}</div>
     <div class="mb-2">

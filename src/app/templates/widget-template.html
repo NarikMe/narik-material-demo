@@ -1,18 +1,22 @@
 <div class="card m-2">
   <div class="card-body">
+
+    <div class="card-footer">
+      <div narik-section="widgetFooter">
+        <narik-button buttonClass='btn-outline-primary
+            btn-rounded waves-effect' iconClass='fa-check' label='{{"prompt" | translate}}' (click)="prompt()">
+        </narik-button>
+      </div>
+    </div>
+
+
     <div narik-section="widgetTitle">
       <h5 class="card-title">{{ title }}</h5>
     </div>
 
     <div narik-section="widgetContent"></div>
 
-    <div narik-section="widgetFooter">
-      <narik-button
-      buttonClass='btn-outline-primary
-      btn-rounded waves-effect'
-      iconClass='fa-check'
-      label='{{"prompt" | translate}}' (click)="prompt()">
-      </narik-button>
-    </div>
+
+
   </div>
 </div>

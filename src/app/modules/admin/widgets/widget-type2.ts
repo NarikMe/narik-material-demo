@@ -2,7 +2,7 @@ import { Widget } from "./base-widget";
 import { Component } from "@angular/core";
 import { NarikBaseTemplate } from "narik-core";
 
-@NarikBaseTemplate("widget")
+@NarikBaseTemplate("widget2")
 @Component({
   selector: "widget-type2",
   template: `
@@ -20,7 +20,7 @@ import { NarikBaseTemplate } from "narik-core";
 export class WidgetType2 extends Widget {
   content = "C";
 
-  propmt() {
+  prompt() {
     alert(this.content);
   }
 }
