@@ -39,7 +39,8 @@
           {
             "name": "hello"
           }
-        ]
+        ],
+        "entityTypeCreator": "classValidation"
       },
       {
         "key": "testDynamicForm",
@@ -773,8 +774,7 @@
       {
         "key": "classValidation",
         "viewType": "Detail",
-        "entity": "classValidation",
-        "component": "ClassValidationDetailComponent"
+        "entity": "classValidation"
       },
       {
         "key": "customEntity",

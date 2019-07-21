@@ -19,7 +19,8 @@ import {
   MODULE_DATA_KEY,
   ModuleInfo,
   AuthenticationService,
-  DialogService
+  DialogService,
+  EntityTypeService
 } from "narik-infrastructure";
 import { NarikModule } from "narik-core";
 import { Observable } from "rxjs/internal/Observable";
@@ -35,6 +36,7 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { ColorPickerComponent } from "./color-picker/color-picker.component";
 import { MatCardModule } from "@angular/material/card";
+import { ClassValidation } from "./class-validation-sample/class-validation-sample";
 
 const moduleKey = "admin";
 const routes: Routes = [
@@ -102,10 +104,13 @@ export class AdminModule extends NarikModule {
     nbMenuService: NbMenuService,
     authenticationService: AuthenticationService,
     dialogService: DialogService,
+    ets: EntityTypeService,
     dfs: DynamicFormService
   ) {
     super(injector);
+
     dfs.addDynamicFormComponent("color", ColorPickerComponent);
+    ets.addTypeCreator("classValidation", () => new ClassValidation());
     nbMenuService
       .onItemClick()
       .pipe(
