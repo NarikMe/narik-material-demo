@@ -1,13 +1,10 @@
-import { AdaptClass } from "data-adapter";
-import { AdaptMethods } from "narik-common";
+import { Adapt } from "data-adapter";
 import { Contains, IsEmail } from "class-validator";
 
-@AdaptClass({
-  name: AdaptMethods.PropertyNames
-})
 export class ClassValidation {
   viewModelId: number;
 
+  @Adapt({ name: "email" })
   _email: string;
 
   @IsEmail()
@@ -18,6 +15,7 @@ export class ClassValidation {
     return this._email;
   }
 
+  @Adapt({ name: "hello" })
   _hello: string;
 
   @Contains("hello")
