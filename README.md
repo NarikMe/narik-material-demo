@@ -2,7 +2,9 @@
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/dc206007664d41e8bc0871c2ff8c7815)](https://www.codacy.com/app/abadakhshan/narik-material-demo?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=NarikMe/narik-material-demo&amp;utm_campaign=Badge_Grade)
 
-A demo for [**Narik**](http://narik.me "Narik Angular Framework") with [Angular Material](https://material.angular.io/ "Angular Material")
+A demo for [**Narik**](http://narik.me "Narik Angular Framework") with [Angular Material](https://material.angular.io/ "Angular Material")  
+
+[Online Demo](http://narik.me/demo/app)
 
 ## Running the demo
 
