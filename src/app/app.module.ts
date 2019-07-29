@@ -55,9 +55,9 @@ const moduleKey = "NarikDemo";
     NarikUiCoreModule,
     NarikAppCoreModule.forRoot({}),
     NarikJwtAuthenticationModule.forRoot({
-      loginEndPoint: "api/account/Authenticate",
-      logoutEndPoint: "api/account/Logout",
-      refreshEndPoint: "api/account/Authenticate",
+      loginEndPoint: "/api/account/Authenticate",
+      logoutEndPoint: "/api/account/Logout",
+      refreshEndPoint: "/api/account/Authenticate",
       tokenStorage: "localStorage",
       loginPageUrl: "/"
     }),
