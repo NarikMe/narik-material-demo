@@ -4,8 +4,8 @@
   "login": {
     "title": "Sign in",
     "button": "Log in",
-    "userName": "Username",
-    "password": "Password",
+    "userName": "Username(admin for demo)",
+    "password": "Password(123 for demo😉)",
     "old-password": "Old Password",
     "re-password": "Confirm New Password",
     "change_Pass": "Change Password",

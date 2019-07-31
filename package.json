@@ -37,7 +37,7 @@
     "localforage": "^1.7.3",
     "lodash": "^4.17.11",
     "material-community-components": "^3.4.3",
-    "narik-app-core": "^2.0.8",
+    "narik-app-core": "^2.0.9",
     "narik-client-storage": "^2.0.0",
     "narik-common": "^2.0.8",
     "narik-core": "^2.0.7",
