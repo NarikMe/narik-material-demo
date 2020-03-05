@@ -1,7 +1,7 @@
 import { Component, OnInit, Injector } from "@angular/core";
-import { DynamicFormComponent } from "narik-ui-core";
-import { NarikViewField, EntityField } from "narik-infrastructure";
-import { NarikMatFormFieldInput } from "narik-ui-material";
+import { DynamicFormComponent } from "@narik/ui-core";
+import { NarikViewField, EntityField } from "@narik/infrastructure";
+import { NarikMatFormFieldInput } from "@narik/ui-material";
 
 @Component({
   templateUrl: "color-picker.component.html"

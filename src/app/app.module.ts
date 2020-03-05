@@ -10,22 +10,22 @@ import {
   MODULE_DATA_KEY,
   MODULE_UI_KEY,
   ModuleInfo
-} from "narik-infrastructure";
+} from "@narik/infrastructure";
 import {
   NarikCoreModule,
   NarikTranslateLoader,
   MEMORY_STORAGE_VALIDITY_LEN,
   NarikModule
-} from "narik-core";
-import { NarikUiCoreModule } from "narik-ui-core";
-import { NarikAppCoreModule } from "narik-app-core";
-import { NarikJwtAuthenticationModule } from "narik-jwt-authentication";
-import { NarikClientStorageModule } from "narik-client-storage";
+} from "@narik/core";
+import { NarikUiCoreModule } from "@narik/ui-core";
+import { NarikAppCoreModule } from "@narik/app-core";
+import { NarikJwtAuthenticationModule } from "@narik/jwt-authentication";
+import { NarikClientStorageModule } from "@narik/client-storage";
 
 import { NbLayoutDirection, NbThemeModule, NbIconModule } from "@nebular/theme";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MainModule } from "./modules/main/main.module";
-import { FORM_ITEM_DEFAULT_CLASS } from "narik-ui-material";
+import { FORM_ITEM_DEFAULT_CLASS } from "@narik/ui-material";
 import { Observable } from "rxjs/internal/Observable";
 import { DemoCommandProcessor } from "./services/command-processor.service";
 import { NbEvaIconsModule } from "@nebular/eva-icons";

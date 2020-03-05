@@ -6,8 +6,8 @@ import {
   LoginResult,
   DialogService,
   NarikComponent
-} from "narik-infrastructure";
-import { findBestRouteAfterLogin } from "narik-common";
+} from "@narik/infrastructure";
+import { findBestRouteAfterLogin } from "@narik/common";
 
 @Component({
   templateUrl: "login-view.component.html",

@@ -8,10 +8,10 @@ import {
   FormViewRoute,
   NarikAppCoreModule,
   ModuleLoadCompletelyGuard
-} from "narik-app-core";
+} from "@narik/app-core";
 import { CommonModule } from "@angular/common";
 import { ShareModule } from "../share/share.module";
-import { NarikUiMaterialModule } from "narik-ui-material";
+import { NarikUiMaterialModule } from "@narik/ui-material";
 import { FormsModule } from "@angular/forms";
 import { NarikNgxAdmin } from "../narik-ngx-admin/narik-ngx-admin.module";
 import {
@@ -21,16 +21,16 @@ import {
   AuthenticationService,
   DialogService,
   EntityTypeService
-} from "narik-infrastructure";
-import { NarikModule } from "narik-core";
+} from "@narik/infrastructure";
+import { NarikModule } from "@narik/core";
 import { Observable } from "rxjs/internal/Observable";
 import { NbMenuService } from "@nebular/theme";
 import { filter } from "rxjs/internal/operators/filter";
 import { map } from "rxjs/internal/operators/map";
 import { ChangePassComponent } from "../main/change-password/change-password.component";
-import { DynamicFormService } from "narik-ui-core";
+import { DynamicFormService } from "@narik/ui-core";
 import { MccColorPickerModule } from "material-community-components";
-import { NarikCommonModule } from "narik-common";
+import { NarikCommonModule } from "@narik/common";
 import { MatIconModule } from "@angular/material/icon";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";

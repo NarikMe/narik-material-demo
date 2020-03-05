@@ -30,6 +30,7 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
+            "aot": true,
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -41,7 +42,7 @@
               "node_modules/roboto-fontface/css/roboto/roboto-fontface.css",
               "node_modules/typeface-exo/index.css",
               "src/styles/styles.scss",
-              "node_modules/narik-ui-material/styles/narik-ui-material.css"
+              "node_modules/@narik/ui-material/styles/narik-ui-material.css"
             ],
             "stylePreprocessorOptions": {
               "includePaths": [

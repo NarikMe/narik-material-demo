@@ -1,10 +1,10 @@
-import { NarikTranslateService } from "narik-core";
+import { NarikTranslateService } from "@narik/core";
 import {
   NarikComponent,
   FormTitleResolver,
   MODULE_UI_KEY,
   MetaDataService
-} from "narik-infrastructure";
+} from "@narik/infrastructure";
 import { filter } from "rxjs/internal/operators/filter";
 import { map } from "rxjs/internal/operators/map";
 

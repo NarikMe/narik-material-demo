@@ -6,9 +6,9 @@ import {
   NarikComponent,
   DialogRef,
   DIALOG_REF
-} from "narik-infrastructure";
-import { findBestRouteAfterLogin } from "narik-common";
-import { NarikHttpService } from "narik-core";
+} from "@narik/infrastructure";
+import { findBestRouteAfterLogin } from "@narik/common";
+import { NarikHttpService } from "@narik/core";
 
 @Component({
   templateUrl: "change-password.component.html"

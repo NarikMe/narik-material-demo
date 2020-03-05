@@ -4,7 +4,7 @@ import { LoginViewComponent } from "./modules/main/login-view/login-view.compone
 import {
   UserIsAuthenticatedGuard,
   UserIsAuthorizedGuard
-} from "narik-app-core";
+} from "@narik/app-core";
 
 const routes: Routes = [
   {

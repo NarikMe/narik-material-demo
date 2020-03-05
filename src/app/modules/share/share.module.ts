@@ -1,6 +1,6 @@
 import { COMPONENTS } from "./index";
-import { NgModule } from "@angular/core";
-import { NarikUiMaterialModule } from "narik-ui-material";
+import { NgModule, Injectable } from "@angular/core";
+import { NarikUiMaterialModule } from "@narik/ui-material";
 import { CommonModule, DatePipe } from "@angular/common";
 import { FormsModule } from "@angular/forms";
 import { MatCardModule } from "@angular/material/card";
@@ -20,6 +20,7 @@ export const PICK_FORMATS = {
   }
 };
 
+@Injectable()
 export class PickDateAdapter extends NativeDateAdapter {
   format(date: Date, displayFormat: any): string {
     if (displayFormat === "input") {

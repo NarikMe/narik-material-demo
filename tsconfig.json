@@ -19,11 +19,11 @@
       "dom"
     ],
     "paths": {
-      "narik-ui-lib": [
-        "node_modules/narik-ui-material"
+      "@narik/ui-lib": [
+        "node_modules/@narik/ui-material"
       ],
-      "narik-ui-lib/*": [
-        "node_modules/narik-ui-material/*"
+      "@narik/ui-lib/*": [
+        "node_modules/@narik/ui-material/*"
       ]
     }
   }

@@ -1,4 +1,4 @@
-import { NarikHttpService } from "narik-core";
+import { NarikHttpService } from "@narik/core";
 import {
   CommandProcessor,
   CommandHost,
@@ -6,7 +6,7 @@ import {
   FieldTypes,
   DialogResult,
   DialogInputContent
-} from "narik-infrastructure";
+} from "@narik/infrastructure";
 import { Injectable } from "@angular/core";
 @Injectable()
 export class DemoCommandProcessor implements CommandProcessor {

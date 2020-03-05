@@ -5,20 +5,20 @@ import {
   FormViewRoute,
   NarikAppCoreModule,
   ModuleLoadCompletelyGuard
-} from "narik-app-core";
+} from "@narik/app-core";
 import { CommonModule } from "@angular/common";
 import { ShareModule } from "../share/share.module";
-import { NarikUiMaterialModule } from "narik-ui-material";
+import { NarikUiMaterialModule } from "@narik/ui-material";
 import { FormsModule } from "@angular/forms";
 import { NarikNgxAdmin } from "../narik-ngx-admin/narik-ngx-admin.module";
 import {
   MODULE_UI_KEY,
   MODULE_DATA_KEY,
   ModuleInfo
-} from "narik-infrastructure";
-import { NarikModule } from "narik-core";
+} from "@narik/infrastructure";
+import { NarikModule } from "@narik/core";
 import { Observable } from "rxjs/internal/Observable";
-import { NarikCommonModule } from "narik-common";
+import { NarikCommonModule } from "@narik/common";
 import { SaleMainComponent } from "./main/sale-main.component";
 import { SaleMainViewComponent } from "./main-view/sale-main-view.component";
 

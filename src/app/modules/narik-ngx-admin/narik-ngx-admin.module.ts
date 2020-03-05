@@ -1,4 +1,4 @@
-import { NarikMatTabOutletModule } from "narik-ui-material";
+import { NarikMatTabOutletModule } from "@narik/ui-material";
 
 import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";

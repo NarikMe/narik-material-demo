@@ -1,9 +1,9 @@
-import { NarikCommonModule } from "narik-common";
+import { NarikCommonModule } from "@narik/common";
 import {
   NarikMatBusyIndicatorModule,
   NarikMatButtonModule,
   NarikMatInputModule
-} from "narik-ui-material";
+} from "@narik/ui-material";
 
 import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
