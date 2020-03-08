@@ -42,7 +42,7 @@
     "@narik/core": "^3.0.1",
     "@narik/infrastructure": "^3.0.0",
     "@narik/jwt-authentication": "^3.0.0",
-    "@narik/ui-core": "^3.0.1",
+    "@narik/ui-core": "^3.0.0",
     "@narik/ui-material": "^3.0.0",
     "ngx-custom-validators": "^9.0.0",
     "ngforage": "^5.0.1",
