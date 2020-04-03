@@ -13,7 +13,8 @@
       "$$uiDefaults.data-table",
       "$$uiDefaults.data-table-select",
       "$$uiDefaults.button",
-      "$$uiDefaults.toolbar"
+      "$$uiDefaults.toolbar",
+      "$$uiDefaults.form-field"
     ],
     "viewOptions": {
       "detailNavigationProvider": "$$shareValues.dialogNavigationProvider"
@@ -203,7 +204,12 @@
           {
             "name": "title",
             "required": true,
-            "fieldType": "text"
+            "fieldType": "text",
+            "validators": ["minLength", "maxLength"],
+            "validatorParams": {
+              "minLength": 3,
+              "maxLength": 8
+            }
           },
           {
             "name": "isActive",

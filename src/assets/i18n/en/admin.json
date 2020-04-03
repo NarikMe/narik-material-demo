@@ -57,14 +57,16 @@
   "list_customer": "Customer List",
   "errors": {
     "DUPLICATE_USER_NAME": "The user name is duplicate",
-    "ADMIN_IS_NOT_EDITABLE": "Admin user is not editable!"
+    "ADMIN_IS_NOT_EDITABLE": "Admin user is not editable!",
+    "minlength": "The minimum length for {0} is {1}",
+    "maxlength": "The maximum value for {0} is {1}"
   },
-  "testColor":"Custom Component(Color)",
-  "testDynamicForm":"Test Dynamic Form",
-  "customEntity":"Custom Entity",
-  "lName":"Last Name",
-  "fName":"First Name",
-  "classValidation":"Class Validation Sample",
-  "email":"Email",
-  "hello":"Hello Content"
+  "testColor": "Custom Component(Color)",
+  "testDynamicForm": "Test Dynamic Form",
+  "customEntity": "Custom Entity",
+  "lName": "Last Name",
+  "fName": "First Name",
+  "classValidation": "Class Validation Sample",
+  "email": "Email",
+  "hello": "Hello Content"
 }

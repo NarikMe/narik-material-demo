@@ -34,5 +34,11 @@
     "value": {
       "appendShortcutToTooltip": true
     }
+  },
+  "form-field": {
+    "key": "form-field",
+    "value": {
+      "displayErrorMode": "icon"
+    }
   }
 }
