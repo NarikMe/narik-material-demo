@@ -1,10 +1,10 @@
 <narik-busy-indicator>
-  <narik-mat-toolbar toolbarKey="{{config && config.toolbarKey ? config.toolbarKey : 'detailToolBar'}}"> </narik-mat-toolbar>
+  <narik-mat-toolbar toolbarKey="{{config && config.toolbarKey ? config.toolbarKey : 'editToolBar'}}"> </narik-mat-toolbar>
   <mat-card>
     <form
       #form="ngForm"
       novalidate
-      name="frmDetail"
+      name="frmEdit"
     >
       <div narik-section="formContent"></div>
     </form>

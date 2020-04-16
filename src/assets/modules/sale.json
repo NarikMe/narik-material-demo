@@ -22,7 +22,7 @@
       "$$uiDefaults.toolbar"
     ],
     "viewOptions": {
-      "detailNavigationProvider": "default"
+      "editNavigationProvider": "default"
     },
     "entities": [
       {
@@ -54,7 +54,7 @@
     "views": [
       {
         "key": "sale",
-        "viewType": "Detail",
+        "viewType": "Edit",
         "entity": "sale"
       },
       {
@@ -79,6 +79,6 @@
         ]
       }
     ],
-    "toolbars": ["$$toolbar.detailToolBar", "$$toolbar.listToolBar"]
+    "toolbars": ["$$toolbar.editToolBar", "$$toolbar.listToolBar"]
   }
 }
