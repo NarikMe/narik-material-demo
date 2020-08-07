@@ -20,8 +20,8 @@
             "customWebpackConfig": {
               "path": "./extra-webpack.config.js",
               "mergeStrategies": {
-                "module": "prepend",
-                "module.rules": "prepend",
+                "module": "append",
+                "module.rules": "append",
                 "plugins": "prepend"
               }
             },
@@ -44,8 +44,7 @@
             "stylePreprocessorOptions": {
               "includePaths": []
             },
-            "scripts": [],
-            "es5BrowserSupport": true
+            "scripts": []
           },
           "configurations": {
             "production": {
