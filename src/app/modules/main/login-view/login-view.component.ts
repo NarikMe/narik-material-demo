@@ -53,8 +53,7 @@ export class LoginViewComponent extends NarikComponent implements OnInit {
     this.returnUrl = this.route.snapshot.queryParams["returnUrl"];
   }
   login() {
-    alert("aliali");
-    return;
+
     if (!this.loginModel.userName || !this.loginModel.password) {
       this.dialogService.error("errors.invalid_form");
     } else {
