@@ -1,6 +1,6 @@
 import { Input, Directive } from "@angular/core";
 
-
+@Directive()
 export class Widget {
   @Input()
   title: string;
