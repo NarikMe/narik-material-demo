@@ -3,8 +3,6 @@ const AngularCompilerPlugin = require("@ngtools/webpack/src");
 const TemplateResolver = require("./build-tools/template-resolver");
 
 module.exports = (config) => {
-  debugger;
-
   const index = config.plugins.findIndex((p) => {
     return p instanceof AngularCompilerPlugin.AngularCompilerPlugin;
   });
