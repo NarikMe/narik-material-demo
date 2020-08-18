@@ -1,6 +1,6 @@
 const path = require("path");
 const AngularCompilerPlugin = require("@ngtools/webpack/src");
-const TemplateResolver = require("./build-tools/template-resolver");
+const LayoutResolver = require("./build-tools/layout-resolver");
 
 module.exports = (config) => {
   const index = config.plugins.findIndex((p) => {
@@ -21,7 +21,7 @@ module.exports = (config) => {
       {
         loader: "@narik/webpack-tools",
         options: {
-          resolver: new TemplateResolver(),
+          resolver: new LayoutResolver(),
           basePath: config.plugins[index]._basePath,
         },
       },
