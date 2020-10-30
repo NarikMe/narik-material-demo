@@ -7,7 +7,7 @@ import { AdminMainViewComponent } from "./main-view/admin-main-view.component";
 import {
   FormViewRoute,
   NarikAppCoreModule,
-  ModuleLoadCompletelyGuard
+  ModuleLoadCompletelyGuard,
 } from "@narik/app-core";
 import { CommonModule } from "@angular/common";
 import { ShareModule } from "../share/share.module";
@@ -20,7 +20,7 @@ import {
   ModuleInfo,
   AuthenticationService,
   DialogService,
-  EntityTypeService
+  EntityTypeService,
 } from "@narik/infrastructure";
 import { NarikModule } from "@narik/core";
 import { Observable } from "rxjs/internal/Observable";
@@ -29,7 +29,7 @@ import { filter } from "rxjs/internal/operators/filter";
 import { map } from "rxjs/internal/operators/map";
 import { ChangePassComponent } from "../main/change-password/change-password.component";
 import { DynamicFormService } from "@narik/ui-core";
-import { MccColorPickerModule } from "material-community-components";
+import { MccColorPickerModule } from "material-community-components/color-picker";
 import { NarikCommonModule } from "@narik/common";
 import { MatIconModule } from "@angular/material/icon";
 import { MatFormFieldModule } from "@angular/material/form-field";
@@ -52,17 +52,17 @@ const routes: Routes = [
           {
             path: "",
             component: AdminMainViewComponent,
-            data: { title: "dashboard" }
+            data: { title: "dashboard" },
           },
           {
             path: "widgets",
-            component: WidgetViewComponent
+            component: WidgetViewComponent,
           },
-          ...FormViewRoute(moduleKey)
-        ]
-      }
-    ]
-  }
+          ...FormViewRoute(moduleKey),
+        ],
+      },
+    ],
+  },
 ];
 
 @NgModule({
@@ -81,8 +81,8 @@ const routes: Routes = [
     MatCardModule,
     MccColorPickerModule.forRoot({
       used_colors: ["#000000", "#123456", "#777666"],
-      empty_color: "transparent"
-    })
+      empty_color: "transparent",
+    }),
   ],
   declarations: [COMPONENTS],
   exports: [],
@@ -90,13 +90,13 @@ const routes: Routes = [
   providers: [
     {
       provide: MODULE_UI_KEY,
-      useValue: moduleKey
+      useValue: moduleKey,
     },
     {
       provide: MODULE_DATA_KEY,
-      useValue: "NarikDemo"
-    }
-  ]
+      useValue: "NarikDemo",
+    },
+  ],
 })
 export class AdminModule extends NarikModule {
   constructor(
@@ -117,7 +117,7 @@ export class AdminModule extends NarikModule {
         filter(({ tag }) => tag === "user-context-menu"),
         map(({ item: { data } }) => data)
       )
-      .subscribe(item => {
+      .subscribe((item) => {
         if (item === "logout") {
           authenticationService.logout();
         } else if (item === "changePass") {
@@ -128,7 +128,7 @@ export class AdminModule extends NarikModule {
             [],
             {
               showBackdrop: true,
-              disableAutoClose: true
+              disableAutoClose: true,
             }
           );
         }
