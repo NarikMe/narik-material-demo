@@ -9,13 +9,13 @@ import {
   ConfigService,
   MODULE_DATA_KEY,
   MODULE_UI_KEY,
-  ModuleInfo
+  ModuleInfo,
 } from "@narik/infrastructure";
 import {
   NarikCoreModule,
   NarikTranslateLoader,
   MEMORY_STORAGE_VALIDITY_LEN,
-  NarikModule
+  NarikModule,
 } from "@narik/core";
 import { NarikUiCoreModule } from "@narik/ui-core";
 import { NarikAppCoreModule } from "@narik/app-core";
@@ -30,7 +30,6 @@ import { Observable } from "rxjs/internal/Observable";
 import { DemoCommandProcessor } from "./services/command-processor.service";
 import { NbEvaIconsModule } from "@nebular/eva-icons";
 
-
 const moduleKey = "NarikDemo";
 
 @NgModule({
@@ -43,14 +42,14 @@ const moduleKey = "NarikDemo";
       loader: {
         provide: TranslateLoader,
         useFactory: HttpLoaderFactory,
-        deps: [HttpClient, ConfigService]
-      }
+        deps: [HttpClient, ConfigService],
+      },
     }),
     NarikCoreModule.forRoot({
       configFilePath: "assets/app-config.json",
       defaultLang: "en",
       useDefaultLang: true,
-      commandProcessor: DemoCommandProcessor
+      commandProcessor: DemoCommandProcessor,
     }),
     NarikUiCoreModule,
     NarikAppCoreModule.forRoot({}),
@@ -59,7 +58,7 @@ const moduleKey = "NarikDemo";
       logoutEndPoint: "/api/account/Logout",
       refreshEndPoint: "/api/account/Authenticate",
       tokenStorage: "localStorage",
-      loginPageUrl: "/"
+      loginPageUrl: "/",
     }),
     NbEvaIconsModule,
     NbIconModule,
@@ -71,27 +70,27 @@ const moduleKey = "NarikDemo";
     ),
     BrowserAnimationsModule,
     MainModule,
-    NarikClientStorageModule.forRoot()
+    NarikClientStorageModule.forRoot(),
   ],
   providers: [
     {
       provide: MODULE_DATA_KEY,
-      useValue: moduleKey
+      useValue: moduleKey,
     },
     {
       provide: MODULE_UI_KEY,
-      useValue: moduleKey
+      useValue: moduleKey,
     },
     {
       provide: MEMORY_STORAGE_VALIDITY_LEN,
-      useValue: 1
+      useValue: 1,
     },
     {
       provide: FORM_ITEM_DEFAULT_CLASS,
-      useValue: "item-full-width"
-    }
+      useValue: "item-full-width",
+    },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule extends NarikModule {
   constructor(injector: Injector) {

@@ -1,18 +1,39 @@
-<mat-form-field [ngClass]="cssClass" [floatLabel]='floatLabel' [appearance]='appearance' [hintLabel]='hintLabel'>
-  <mat-label *ngIf="field.label">{{field.label | translate}}</mat-label>
-  <input [narikValidatorParams]="field.validatorParams"
-    [narikValidator]="field.validators" [name]="field.name" matInput mccColorPickerOrigin
-    #trigger="mccColorPickerOrigin" [required]="field.required" [(ngModel)]='model[field.model]'
-    placeholder="{{field.options.placeHolder | translate}}">
-  <mcc-color-picker matSuffix mccConnectedColorPicker [mccConnectedColorPickerOrigin]="trigger"
-    class="mat-form-field-suffix" [hideHexForms]="true" hideButtons>
-    <mcc-color-picker-collection [label]="'First Collection'" hideEmpty="true" [colors]="colors">
+<mat-form-field
+  [ngClass]="cssClass"
+  [floatLabel]="floatLabel"
+  [appearance]="appearance"
+  [hintLabel]="hintLabel"
+  [formGroup]="form"
+>
+  <mat-label *ngIf="field.label">{{ field.label | translate }}</mat-label>
+  <input
+    [name]="field.name"
+    matInput
+    mccColorPickerOrigin
+    #trigger="mccColorPickerOrigin"
+    [required]="field.required"
+    [formControlName]="field.model"
+    placeholder="{{ field.options.placeHolder | translate }}"
+  />
+  <mcc-color-picker
+    matSuffix
+    mccConnectedColorPicker
+    [mccConnectedColorPickerOrigin]="trigger"
+    class="mat-form-field-suffix"
+    [hideHexForms]="true"
+    hideButtons
+  >
+    <mcc-color-picker-collection
+      [label]="'First Collection'"
+      hideEmpty="true"
+      [colors]="colors"
+    >
     </mcc-color-picker-collection>
   </mcc-color-picker>
-  <mat-icon *ngIf='suffixIcon' matSuffix>{{suffixIcon}}</mat-icon>
-  <mat-icon *ngIf='prefixIcon' matPrefix>{{prefixIcon}}</mat-icon>
-  <mat-hint *ngIf='startHint'>{{startHint}}</mat-hint>
-  <mat-hint *ngIf='endHint' align="end">{{endHint}}</mat-hint>
-  <span *ngIf='prefixContent' matPrefix>{{prefixContent}}</span>
-  <span *ngIf='suffixContent' matSuffix>{{suffixContent}}</span>
+  <mat-icon *ngIf="suffixIcon" matSuffix>{{ suffixIcon }}</mat-icon>
+  <mat-icon *ngIf="prefixIcon" matPrefix>{{ prefixIcon }}</mat-icon>
+  <mat-hint *ngIf="startHint">{{ startHint }}</mat-hint>
+  <mat-hint *ngIf="endHint" align="end">{{ endHint }}</mat-hint>
+  <span *ngIf="prefixContent" matPrefix>{{ prefixContent }}</span>
+  <span *ngIf="suffixContent" matSuffix>{{ suffixContent }}</span>
 </mat-form-field>

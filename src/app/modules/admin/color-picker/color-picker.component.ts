@@ -2,17 +2,21 @@ import { Component, OnInit, Injector } from "@angular/core";
 import { DynamicFormComponent } from "@narik/ui-core";
 import { NarikViewField, EntityField } from "@narik/infrastructure";
 import { NarikMatFormFieldInput } from "@narik/ui-material";
+import { FormGroup } from "@angular/forms";
 
 @Component({
-  templateUrl: "color-picker.component.html"
+  templateUrl: "color-picker.component.html",
 })
-export class ColorPickerComponent extends NarikMatFormFieldInput
-  implements OnInit, DynamicFormComponent {
+export class ColorPickerComponent
+  extends NarikMatFormFieldInput
+  implements DynamicFormComponent {
   field: NarikViewField = {
     model: "",
-    options: {}
+    options: {},
   };
-  model: any = {};
+
+  form: FormGroup;
+  model: any;
 
   colors: string[] = [
     "#FF6633",
@@ -64,15 +68,9 @@ export class ColorPickerComponent extends NarikMatFormFieldInput
     "#4DB380",
     "#FF4D4D",
     "#99E6E6",
-    "#6666FF"
+    "#6666FF",
   ];
   constructor(injector: Injector) {
     super(injector);
-  }
-
-  ngOnInit() {
-    if (this.model[(this.field as NarikViewField).model] === undefined) {
-      this.model[(this.field as NarikViewField).model] = "#FFFFFF";
-    }
   }
 }
