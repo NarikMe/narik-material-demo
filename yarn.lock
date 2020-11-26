@@ -137,7 +137,7 @@
     ora "5.1.0"
     rxjs "6.6.3"
 
-"@angular/animations@~11.0.1":
+"@angular/animations@~11.0.2":
   version "11.0.2"
   resolved "https://registry.yarnpkg.com/@angular/animations/-/animations-11.0.2.tgz#c095ab0aed4491732c81a894987bcab1a854ab15"
   integrity sha512-uF/RlBY1rznbuw+1lm8Q2HKDrBOQQ2Bi2cUPuef+ALn+lxGl501eHlE+PTtBjDEzJcJPfd4pE3Ww3+3Il+D+Tw==
@@ -153,10 +153,10 @@
   optionalDependencies:
     parse5 "^5.0.0"
 
-"@angular/cdk@~11.0.0":
-  version "11.0.0"
-  resolved "https://registry.yarnpkg.com/@angular/cdk/-/cdk-11.0.0.tgz#7ec0fc8b5051c54f4a3910e61f1ee7d30796c2d2"
-  integrity sha512-kfgEE/LDYMZB4NICChzWn/nTEeoZ3wxrYsDDcy2Qj+57zUmJcxBLL1h+tawYCy3a1g7ypDLYX7yrbPEBE7/EXQ==
+"@angular/cdk@~11.0.1":
+  version "11.0.1"
+  resolved "https://registry.yarnpkg.com/@angular/cdk/-/cdk-11.0.1.tgz#37e1e4fe4450497a5965282dd8cc3702583fd6cf"
+  integrity sha512-PkOaIZWG9RQRmvw/6LxTM4nti5qzmhAKj6G9un5D/izO0gAyCzGgPzdqf3ZSW/rYz2nUVicdBvk+w0rRgcj1iw==
   dependencies:
     tslib "^2.0.0"
   optionalDependencies:
@@ -195,14 +195,14 @@
   dependencies:
     tslib "^2.0.0"
 
-"@angular/common@~11.0.1":
+"@angular/common@~11.0.2":
   version "11.0.2"
   resolved "https://registry.yarnpkg.com/@angular/common/-/common-11.0.2.tgz#7558b940a1110a9c6c65103b1ae8e18f2c8e939c"
   integrity sha512-DGJuSBDt+bF77AzJNrLzeaFGSdwQ3OjgP9UUv1eKvaxp9D+lDam8suIJMuBwTsJII/yrDndY75ENPNTEqhmB2A==
   dependencies:
     tslib "^2.0.0"
 
-"@angular/compiler-cli@~11.0.1":
+"@angular/compiler-cli@~11.0.2":
   version "11.0.2"
   resolved "https://registry.yarnpkg.com/@angular/compiler-cli/-/compiler-cli-11.0.2.tgz#961df7f08dc98a6ea202e6aa22dc81ff29c9719d"
   integrity sha512-I39zNcf6q0NN4PKCbY6Lm4WP69ujLrAew56X5yvlECW9CJlidV0qi1S/DGgAWhXTDOt8XA/KP1hD1pgJtMHjJQ==
@@ -235,7 +235,7 @@
   dependencies:
     tslib "^2.0.0"
 
-"@angular/compiler@~11.0.1":
+"@angular/compiler@~11.0.2":
   version "11.0.2"
   resolved "https://registry.yarnpkg.com/@angular/compiler/-/compiler-11.0.2.tgz#892cd38b3afa6ba63149d0bfd9265401a3d88d0c"
   integrity sha512-deDT5+Lcph4nNhh6sZd0mBS5OkJL3HPbX5upDMI28Wuayt18Pn0UNotWY77/KV6wwIAInmlx9N06PoH3pq3hqg==
@@ -254,7 +254,7 @@
   dependencies:
     tslib "^2.0.0"
 
-"@angular/core@~11.0.1":
+"@angular/core@~11.0.2":
   version "11.0.2"
   resolved "https://registry.yarnpkg.com/@angular/core/-/core-11.0.2.tgz#490248b1d746e24513f2db996bd857e5a36d2f45"
   integrity sha512-GyDebks5ZPHDyChDW3VvzJq00Ct0iuesNpb9z/GpKtOXqug3sGr4KgkFDUTbfizKPWyeoaLH9FQYP55215nCKQ==
@@ -275,22 +275,22 @@
   dependencies:
     tslib "^2.0.0"
 
-"@angular/forms@~11.0.1":
+"@angular/forms@~11.0.2":
   version "11.0.2"
   resolved "https://registry.yarnpkg.com/@angular/forms/-/forms-11.0.2.tgz#68de53edfd504b570bfcd23f371a2f21fbec5c49"
   integrity sha512-Rn17VPviTTwiDn8Yt/UzdkXjFX0LdvjkmTNZoakqOk8/QNnsCG5sUDJAV7BKHk+2nEfUGCopS4kpBiLKLoaBpQ==
   dependencies:
     tslib "^2.0.0"
 
-"@angular/language-service@~11.0.1":
+"@angular/language-service@~11.0.2":
   version "11.0.2"
   resolved "https://registry.yarnpkg.com/@angular/language-service/-/language-service-11.0.2.tgz#b9a97a9bdd3d10ac2335eb94bacf8ab5514aeeb5"
   integrity sha512-Cfam/NEP8hKkcqBVGlkBVuPkojZukmVOxdtsFIkIjJW/mywad2lIfjHR/0rZ43jD1bPb7s+tyYcJBgNg42p2ng==
 
-"@angular/material@~11.0.0":
-  version "11.0.0"
-  resolved "https://registry.yarnpkg.com/@angular/material/-/material-11.0.0.tgz#6ef7048763e7415dabda54d32847b2821bf6413d"
-  integrity sha512-pTwYmBrRXbEzF5J/oayZF0ApA0tLN+CUl/2MaYFNLzvE/Kn6hIdDb7TonWAEBgeSHIzqzyTV8IUQuXwGaPds9A==
+"@angular/material@~11.0.1":
+  version "11.0.1"
+  resolved "https://registry.yarnpkg.com/@angular/material/-/material-11.0.1.tgz#add0e87d3e01d7d20484ea5a90d15439ec31a1d6"
+  integrity sha512-FcGIKgFouA9QHwfbWCj8140gMTEgXV3n/yiYsc4Y8VkMIpEmQQnjoOnf5FRIm0ajTQT4qs6uVyB4opJWoHn/pg==
   dependencies:
     tslib "^2.0.0"
 
@@ -301,7 +301,7 @@
   dependencies:
     tslib "^2.0.0"
 
-"@angular/platform-browser-dynamic@~11.0.1":
+"@angular/platform-browser-dynamic@~11.0.2":
   version "11.0.2"
   resolved "https://registry.yarnpkg.com/@angular/platform-browser-dynamic/-/platform-browser-dynamic-11.0.2.tgz#e8f621482c4fe04c14d799c771382891052ee2a2"
   integrity sha512-iV7xz90FdmYFiXZRLkZtP9Lr+OXXh4bhkX7zN1L5H8SSUF4iOJGBdOts5Fiy5GZjYYILjF1pJoEIicfW/RSHjA==
@@ -315,7 +315,7 @@
   dependencies:
     tslib "^2.0.0"
 
-"@angular/platform-browser@~11.0.1":
+"@angular/platform-browser@~11.0.2":
   version "11.0.2"
   resolved "https://registry.yarnpkg.com/@angular/platform-browser/-/platform-browser-11.0.2.tgz#78e640400050c69ca3322b8df0f4ec48f629ec34"
   integrity sha512-RHPm5/h8g3lSBgdg9OvO7w06juEwwBurvQcugXlk7+AeqznwzBodTWGPIATKzMySXQFmpy3bAZ3IxS0NkRrbWA==
@@ -329,7 +329,7 @@
   dependencies:
     tslib "^2.0.0"
 
-"@angular/router@~11.0.1":
+"@angular/router@~11.0.2":
   version "11.0.2"
   resolved "https://registry.yarnpkg.com/@angular/router/-/router-11.0.2.tgz#38119a49edbfc60552d3403b4fc081ec705e2d6d"
   integrity sha512-EU0lQ+3vv1ozly+Z4SgaGj/6CWMIExjnSnA1F7SI2yWmMgMMSb5CsGJ2xzr0V8ex3XZzuU2VuKF74muC58qSyg==
@@ -1236,59 +1236,59 @@
     merge-source-map "^1.1.0"
     schema-utils "^2.7.0"
 
-"@narik/app-core@^4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@narik/app-core/-/app-core-4.0.1.tgz#fba12a1d32e0e1ade94c07e47f3671bb2325388c"
-  integrity sha512-ZI+QixyEh81TRcrgMuMrDddtt77xkEardlvt8o4OQZB/bYhLm6Jsu5HAvUcb7Crxy1nPsjNOPnzXnYSFWT6Y8g==
+"@narik/app-core@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@narik/app-core/-/app-core-5.0.0.tgz#70d8bebe3d8027e17f0b0998c1d0edab17567588"
+  integrity sha512-JgHLsE/BJWuIFVi7ywUiDgFBOllTjZNy9wCD6tn8hi8RbP5nNUhPnf+3hiJrD9VEx8dZH6MjGe8wD5xqD650Cg==
   dependencies:
     tslib "^2.0.0"
 
-"@narik/client-storage@^4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@narik/client-storage/-/client-storage-4.0.1.tgz#96dabd4ba1544a64949feafaa72cbd64e9594700"
-  integrity sha512-zr6lD9Ey5QMLmR+23v+urV8y3xm1ZlvbiTvn0V0AUqgbAIWcvRsA9u6PnHPU9gb3zaG3Aom/yvMxQ40y+ZixYA==
+"@narik/client-storage@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@narik/client-storage/-/client-storage-5.0.0.tgz#2d33c8c38b375b441d5bd2d61f8ffe3a00edb410"
+  integrity sha512-Kg3PGfQmYsUvAbJyXCIhJi5tX9OtlzHRqyeyicoQfP+Qr3Ehgh94SZLqGXUfuxv5tGFmDole4z4l3Fv7Vv7zIQ==
   dependencies:
     tslib "^2.0.0"
 
-"@narik/common@^4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@narik/common/-/common-4.0.1.tgz#e2f709632ae80c4d1f1f67d81becd4c23640b53e"
-  integrity sha512-tPeo1rI8Junjq8ppaU3eeAFRSUdHm2MJKjj63amZ9Gacp8Y8wYknpDTVnAOTKMvdfrs0K64JMYETGHNKwnYqsw==
+"@narik/common@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@narik/common/-/common-5.0.0.tgz#78397cf6c65c085584420f82d2cf4295eb94104d"
+  integrity sha512-Tqz7OaldTQTfv6KVpBOGNyunKRuZObeiko4Bid9gW4XYBD0KHz7GhMF0fDc2oDdAuNOxphkgKb3rglkXPLT83g==
   dependencies:
     tslib "^2.0.0"
 
-"@narik/core@^4.0.2":
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/@narik/core/-/core-4.0.2.tgz#862b7dc5fed881c0fe2ba41710f8b293880f9875"
-  integrity sha512-SnSvO6FLLVgBnmghCWYMaxB/jdjSYq+y4FH5MGsmDSfAU4vbErVI/rwcxDhNAFyWHuhyyrfJARhuTayNErwXnQ==
+"@narik/core@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@narik/core/-/core-5.0.0.tgz#3c34c70cc88105b37e08b28fcca5246c5a9ace6e"
+  integrity sha512-0PP3gg6Kqj4R3oPxkZnT1YvHLi2QoEvaXIqNDDCDJEWpjE7ruKdJOtiQFu+Q3VpFxKnQYSaUHRyMk7qsPG2CBw==
   dependencies:
     tslib "^2.0.0"
 
-"@narik/infrastructure@^4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@narik/infrastructure/-/infrastructure-4.0.1.tgz#301814371c6ee7ee7c34c88666626c55ca5dc074"
-  integrity sha512-bnvgBjR+TZZDfG4o5bQfLoypnDcHRVFo/CJHeAPRoKl+CD8OHhtC3v+rVcTAq8CiRsjUuHxvqDO8uhEfJUB31w==
+"@narik/infrastructure@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@narik/infrastructure/-/infrastructure-5.0.0.tgz#27215313471b21a6296934d7b6b64aefe33c1e63"
+  integrity sha512-H66y6IKHybOMEJAu0jRzjEOefnXTpq3+3ah4im4qa61CadEC/M0rfDwy6rG4HE50H98jQirwITS8YQAbhN497w==
   dependencies:
     tslib "^2.0.0"
 
-"@narik/jwt-authentication@^4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@narik/jwt-authentication/-/jwt-authentication-4.0.1.tgz#e23bc2671dcaa426dd6ecc9f3724a9a0804fb387"
-  integrity sha512-XIRros08O1PXRN3dYVab0Rsqhbu5biWqD31ZWQw5j4gbqSZtNCCyAvMhkIfh12DIEd6sA3uQltCva72AIk2ZMw==
+"@narik/jwt-authentication@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@narik/jwt-authentication/-/jwt-authentication-5.0.0.tgz#1fd9163cf61a8f3edbbaf7be6de0b537fa2f7e79"
+  integrity sha512-SjgqsvypnkLMGq2LzD72NAxYwflm8lxxsqhflpHJIWBlZs9uEzFNiGXo03MFvSx8vncD0MvViPwFijYq82LDcw==
   dependencies:
     tslib "^2.0.0"
 
-"@narik/ui-core@^4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@narik/ui-core/-/ui-core-4.0.1.tgz#83cffa0cccb070c686191b846ac674ded18188c6"
-  integrity sha512-g5WNJIntisH1zOeW2ZHQgjVVVraD/TbsPmC9WyoI+WeTiVMsgZjmXFbuBsO2iEIqsPl2vOroe/4UvWMxsgqJAg==
+"@narik/ui-core@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@narik/ui-core/-/ui-core-5.0.0.tgz#3def3c84548ca760c8f1a2c3e27b07e936dcbca9"
+  integrity sha512-WbmdGYMnlY3+nDOnQyR5oEntPuPdLjOMY1VeSXcIoma14OZOWSf52ajx+feU6EbtIPZYyQX5yfNlfjZ8TxroTg==
   dependencies:
     tslib "^2.0.0"
 
-"@narik/ui-material@^4.0.2":
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/@narik/ui-material/-/ui-material-4.0.2.tgz#e4a9e2153cf43bf141146a6284f803283a4cdab7"
-  integrity sha512-NcBOP/DWxnS6fxJTUrhIIbWZwSER8lisCO4h/oHcixxqRYnGrKMF/slm4PxvskSRggmzVVkjDfTIrj2qRx5qqw==
+"@narik/ui-material@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@narik/ui-material/-/ui-material-5.0.0.tgz#61be5edccef8afb081604d1991ca55e29dc2fa60"
+  integrity sha512-R9enYzoPg9PosSw9oGR7GquxAb8c2IzmW6Vggmq74UG7CmF/6RlkUPp7eHJpFXEq+g2YwNFj6ZJQbxZTEwudGg==
   dependencies:
     tslib "^2.0.0"
 
@@ -1389,7 +1389,7 @@
     "@types/minimatch" "*"
     "@types/node" "*"
 
-"@types/jasmine@*", "@types/jasmine@~3.6.1":
+"@types/jasmine@*", "@types/jasmine@~3.6.2":
   version "3.6.2"
   resolved "https://registry.yarnpkg.com/@types/jasmine/-/jasmine-3.6.2.tgz#02f64450016f7de70f145d698be311136d7c6374"
   integrity sha512-AzfesNFLvOs6Q1mHzIsVJXSeUnqVh4ZHG8ngygKJfbkcSLwzrBVm/LKa+mR8KrOfnWtUL47112gde1MC0IXqpQ==
@@ -1411,10 +1411,15 @@
   resolved "https://registry.yarnpkg.com/@types/minimatch/-/minimatch-3.0.3.tgz#3dca0e3f33b200fc7d1139c0cd96c1268cadfd9d"
   integrity sha512-tHq6qdbT9U1IRSGf14CL0pUlULksvY9OZ+5eEgl1N7t+OA3tGvNpxJCzuKQlsNgCVwbAs670L1vcVQi8j9HjnA==
 
-"@types/node@*", "@types/node@^14.14.8":
+"@types/node@*":
   version "14.14.9"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.9.tgz#04afc9a25c6ff93da14deabd65dc44485b53c8d6"
   integrity sha512-JsoLXFppG62tWTklIoO4knA+oDTYsmqWxHRvd4lpmfQRNhX6osheUOWETP2jMoV/2bEHuMra8Pp3Dmo/stBFcw==
+
+"@types/node@^14.14.10":
+  version "14.14.10"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.10.tgz#5958a82e41863cfc71f2307b3748e3491ba03785"
+  integrity sha512-J32dgx2hw8vXrSbu4ZlVhn1Nm3GbeCFNw2FWL8S5QKucHGY0cyNwjdQdO+KMBZ4wpmC7KhLCiNsdk1RFRIYUQQ==
 
 "@types/parse-json@^4.0.0":
   version "4.0.0"
