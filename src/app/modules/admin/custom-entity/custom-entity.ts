@@ -1,5 +1,4 @@
-import { AdaptClass, Adapt } from "data-adapter";
-import { Contains, Length, IsEmail } from "class-validator";
+import { Adapt } from "data-adapter";
 
 export class CustomEntity {
   viewModelId: number;
@@ -26,5 +25,9 @@ export class CustomEntity {
 
   get fullName(): string {
     return `${this.fName || ""} ${this.lName || ""}`;
+  }
+
+  constructor() {
+    this.fName = "ali";
   }
 }

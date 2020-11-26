@@ -25,6 +25,9 @@
                 "plugins": "prepend"
               }
             },
+            "sourceMap": {
+              "vendor": true
+            },
             "outputPath": "dist/narik-material-demo",
             "index": "src/index.html",
             "main": "src/main.ts",

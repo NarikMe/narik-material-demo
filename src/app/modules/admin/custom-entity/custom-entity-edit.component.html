@@ -9,10 +9,8 @@
     [defaultFocusField]="config?.options?.defaultFocusField"
     [model]="currentEntity"
     [fields]="fields"
+    [form]="form"
   ></narik-dynamic-form>
 
-  <div class="alert alert-info">
-    Full Name: {{currentEntity.fullName}}
-  </div>
-
+  <div class="alert alert-info">Full Name: {{ currentEntity.fullName }}</div>
 </ng-template>

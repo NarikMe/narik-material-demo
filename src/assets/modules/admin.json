@@ -55,8 +55,8 @@
             "name": "field2",
             "fieldType": "number",
             "required": true,
-            "hideExpr": "host.currentEntity.field1==='hide'",
-            "disableExpr": "host.currentEntity.field1==='disable'",
+            "hideExpr": "host.form?.value.field1==='hide'",
+            "disableExpr": "host.form?.value.field1==='disable'",
             "validators": ["min", "max"],
             "validatorParams": {
               "min": 25,
