@@ -1,12 +1,12 @@
-import { Component, Injector } from "@angular/core";
-import { NarikEditForm } from "@narik/app-core";
-import { CustomEntity } from "./custom-entity";
-import { DynamicForm } from "@narik/core";
-import { FormGroup } from "@angular/forms";
+import { Component, Injector } from '@angular/core';
+import { NarikEditForm } from '@narik/app-core';
+import { CustomEntity } from './custom-entity';
+import { DynamicComponent } from '@narik/core';
+import { FormGroup } from '@angular/forms';
 
-@DynamicForm("CustomEntityEditComponent")
+@DynamicComponent('CustomEntityEditComponent')
 @Component({
-  templateUrl: "custom-entity-edit.component.html",
+  templateUrl: 'custom-entity-edit.component.html',
 })
 export class CustomEntityEditComponent extends NarikEditForm<CustomEntity> {
   constructor(injector: Injector) {
