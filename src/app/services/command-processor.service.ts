@@ -1,13 +1,13 @@
-import { NarikHttpService } from "@narik/core";
+import { NarikHttpService } from '@narik/core';
 import {
   CommandProcessor,
   CommandHost,
   CommandInfo,
   FieldTypes,
   DialogResult,
-  DialogInputContent
-} from "@narik/infrastructure";
-import { Injectable } from "@angular/core";
+  DialogInputContent,
+} from '@narik/infrastructure';
+import { Injectable } from '@angular/core';
 @Injectable()
 export class DemoCommandProcessor implements CommandProcessor {
   constructor(private httpService: NarikHttpService) {}
@@ -15,43 +15,41 @@ export class DemoCommandProcessor implements CommandProcessor {
     const senderOfAny = sender as any;
     if (senderOfAny.config && senderOfAny.config.entityKey) {
       switch (senderOfAny.config.entityKey) {
-        case "userAccount": {
-          if (cmd.commandKey === "role") {
+        case 'userAccount': {
+          if (cmd.commandKey === 'role') {
             senderOfAny.isBusy = true;
             this.httpService
               .get(
-                `api/UserAction/GetUserRole?userId=${
-                  senderOfAny.currentEntity.viewModelId
-                }`
+                `/api/UserAction/GetUserRole?userId=${senderOfAny.currentEntity.viewModelId}`
               )
-              .subscribe(currentRole => {
+              .subscribe((currentRole) => {
                 senderOfAny.isBusy = false;
                 senderOfAny.dialogService.showInput(
-                  "",
-                  "selectRole",
+                  '',
+                  'selectRole',
                   [
                     {
-                      name: "role",
+                      name: 'role',
                       fieldType: FieldTypes.Radio,
                       options: {
-                        placeHolder: "title"
+                        placeHolder: 'title',
                       },
                       dataInfo: {
-                        dataKey: "Role",
-                        dataProviderKey: "remote"
-                      }
-                    }
+                        dataKey: 'Role',
+                        dataProviderKey: 'remote',
+                      },
+                    },
                   ],
                   {
-                    role: currentRole
+                    role: currentRole,
                   },
                   (x: DialogResult<DialogInputContent>) => {
-                    if (x.dialogResult === "ok" && x.data && x.data.role) {
+                    if (x.dialogResult === 'ok' && x.data && x.data.role) {
                       senderOfAny.isBusy = true;
                       this.httpService
                         .post(`api/UserAction/UpdateRoles`, {
                           value: senderOfAny.currentEntity.viewModelId,
-                          value1: [x.data.role]
+                          value1: [x.data.role],
                         })
                         .subscribe(() => {
                           senderOfAny.isBusy = false;
@@ -60,9 +58,9 @@ export class DemoCommandProcessor implements CommandProcessor {
                   },
                   undefined,
                   {
-                    defaultAction: "cancel",
+                    defaultAction: 'cancel',
                     showBackdrop: true,
-                    disableAutoClose: true
+                    disableAutoClose: true,
                   }
                 );
               });
