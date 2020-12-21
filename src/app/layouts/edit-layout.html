@@ -1,7 +1,5 @@
 <narik-busy-indicator>
-  <narik-mat-toolbar
-    toolbarKey="{{config && config.toolbarKey ? config.toolbarKey : 'editToolBar'}}"
-  >
+  <narik-mat-toolbar toolbarKey="{{config?.toolbarKey || 'editToolBar'}}">
   </narik-mat-toolbar>
   <mat-card>
     <form *ngIf="form" [formGroup]="form" novalidate #formElement>
