@@ -4,14 +4,14 @@ const LayoutResolver = require("./build-tools/layout-resolver");
 
 module.exports = (config) => {
   const index = config.plugins.findIndex((p) => {
-    return p instanceof AngularCompilerPlugin.AngularCompilerPlugin;
+    return p instanceof AngularCompilerPlugin.ivy.AngularWebpackPlugin;
   });
-  const oldOptions = config.plugins[index]._options;
-  oldOptions.directTemplateLoading = false;
+  const options = config.plugins[index].pluginOptions;
+  options.directTemplateLoading = false;
   config.plugins.splice(index);
 
   config.plugins.push(
-    new AngularCompilerPlugin.AngularCompilerPlugin(oldOptions)
+    new AngularCompilerPlugin.ivy.AngularWebpackPlugin(options)
   );
 
   config.module.rules.unshift({
@@ -22,7 +22,7 @@ module.exports = (config) => {
         loader: "@narik/webpack-tools",
         options: {
           resolver: new LayoutResolver(),
-          basePath: config.plugins[index]._basePath,
+          basePath: path.dirname(options.tsconfig),
         },
       },
     ],
