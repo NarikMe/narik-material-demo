@@ -1,1 +1,12 @@
+<button (click)="do()">ddd</button>
 
+<ng-container
+  *narikComponentLoader="
+    'input';
+    parameters: {
+      type: 'button',
+      value: 'cick'
+    };
+    events: events
+  "
+></ng-container>
