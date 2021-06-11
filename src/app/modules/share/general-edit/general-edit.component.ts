@@ -1,9 +1,7 @@
 import { Component, forwardRef, Injector } from '@angular/core';
-import { DynamicComponent } from '@narik/core';
 import { HOST_TOKEN } from '@narik/infrastructure';
 import { NarikUiEditForm } from '@narik/ui-lib';
 
-@DynamicComponent('GeneralEditComponent')
 @Component({
   templateUrl: 'general-edit.component.html',
   providers: [
