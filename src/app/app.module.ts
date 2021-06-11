@@ -10,12 +10,13 @@ import {
   MODULE_DATA_KEY,
   MODULE_UI_KEY,
   ModuleInfo,
+  ComponentTypeResolver,
 } from '@narik/infrastructure';
 import {
   NarikCoreModule,
   NarikTranslateLoader,
   MEMORY_STORAGE_VALIDITY_LEN,
-  NarikModule,
+  NarikModule
 } from '@narik/core';
 import { NarikUiCoreModule } from '@narik/ui-core';
 import { NarikAppCoreModule } from '@narik/app-core';
@@ -30,6 +31,9 @@ import { Observable } from 'rxjs/internal/Observable';
 import { DemoCommandProcessor } from './services/command-processor.service';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { ReactiveFormsModule } from '@angular/forms';
+import { GeneralListComponent } from './modules/share/general-list/general-list.component';
+import { GeneralEditComponent } from './modules/share/general-edit/general-edit.component';
+import { CustomEntityEditComponent } from './modules/admin/custom-entity/custom-entity-edit.component';
 
 const moduleKey = 'NarikDemo';
 
@@ -95,8 +99,24 @@ const moduleKey = 'NarikDemo';
   bootstrap: [AppComponent],
 })
 export class AppModule extends NarikModule {
-  constructor(injector: Injector) {
+  constructor(
+    injector: Injector,
+    componentTypeResolver: ComponentTypeResolver
+  ) {
     super(injector);
+
+    componentTypeResolver.registerComponentType(
+      'GeneralListComponent',
+      GeneralListComponent
+    );
+    componentTypeResolver.registerComponentType(
+      'GeneralEditComponent',
+      GeneralEditComponent
+    );
+    componentTypeResolver.registerComponentType(
+      'CustomEntityEditComponent',
+      CustomEntityEditComponent
+    );
   }
 
   get key() {
