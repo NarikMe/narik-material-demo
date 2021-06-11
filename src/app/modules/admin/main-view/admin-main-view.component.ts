@@ -13,19 +13,19 @@ export class AdminMainViewComponent {
     },
   };
   constructor(private dialogService: DialogService) {}
-  do() {
-    this.dialogService
-      .showDialog(
-        'input',
-        'title',
-        {
-          value: 'click Me',
-          type: 'button',
-        },
-        [DialogActions.cancel]
-      )
-      .closed.then((res) => {
-        console.log(res);
-      });
-  }
+  // do() {
+  //   this.dialogService
+  //     .showDialog(
+  //       'input',
+  //       'title',
+  //       {
+  //         value: 'click Me',
+  //         type: 'button',
+  //       },
+  //       [DialogActions.cancel]
+  //     )
+  //     .closed.then((res) => {
+  //       console.log(res);
+  //     });
+  // }
 }
