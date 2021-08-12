@@ -3,7 +3,6 @@ const AngularCompilerPlugin = require('@ngtools/webpack/src');
 const LayoutResolver = require('./build-tools/layout-resolver');
 
 module.exports = (config) => {
-  debugger;
   const index = config.plugins.findIndex((p) => {
     return p instanceof AngularCompilerPlugin.AngularWebpackPlugin;
   });
