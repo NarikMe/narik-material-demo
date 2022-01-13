@@ -1,23 +1,23 @@
-import { NarikTranslateService } from "@narik/core";
+import { NarikTranslateService } from '@narik/core';
 import {
   NarikComponent,
   FormTitleResolver,
   MODULE_UI_KEY,
-  MetaDataService
-} from "@narik/infrastructure";
-import { filter } from "rxjs/internal/operators/filter";
-import { map } from "rxjs/internal/operators/map";
+  MetaDataService,
+} from '@narik/infrastructure';
+import { filter } from 'rxjs/internal/operators/filter';
+import { map } from 'rxjs/internal/operators/map';
 
-import { Component, Input, OnInit, Injector } from "@angular/core";
-import { Title } from "@angular/platform-browser";
-import { ActivatedRoute, NavigationEnd, Router } from "@angular/router";
-import { NbMenuItem } from "@nebular/theme";
-import { takeWhile } from "rxjs/internal/operators/takeWhile";
+import { Component, Input, OnInit, Injector } from '@angular/core';
+import { Title } from '@angular/platform-browser';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { NbMenuItem } from '@nebular/theme';
+import { takeWhile } from 'rxjs/internal/operators/takeWhile';
 
 @Component({
-  selector: "ngx-main-view",
-  templateUrl: "ngx-main-view.component.html",
-  styleUrls: ["ngx-main-view.component.scss"]
+  selector: 'ngx-main-view',
+  templateUrl: 'ngx-main-view.component.html',
+  styleUrls: ['ngx-main-view.component.scss'],
 })
 export class NgxMainViewComponent extends NarikComponent implements OnInit {
   _menuItems: NbMenuItem[];
@@ -33,7 +33,7 @@ export class NgxMainViewComponent extends NarikComponent implements OnInit {
   }
 
   @Input()
-  navigationType = "route";
+  navigationType = 'route';
 
   @Input()
   set menuItems(value: NbMenuItem[]) {
@@ -43,8 +43,8 @@ export class NgxMainViewComponent extends NarikComponent implements OnInit {
     return this._menuItems;
   }
 
-  @Input() headerTitle = "";
-  @Input() menuHeader = "";
+  @Input() headerTitle = '';
+  @Input() menuHeader = '';
 
   constructor(
     private translateService: NarikTranslateService,
@@ -60,12 +60,12 @@ export class NgxMainViewComponent extends NarikComponent implements OnInit {
     const moduleUiKey = injector.get(MODULE_UI_KEY);
     const viewOptions = metaDataService.getValue<any>(
       moduleUiKey,
-      "viewOptions"
+      'viewOptions'
     );
 
     router.events
       .pipe(
-        filter(event => event instanceof NavigationEnd),
+        filter((event) => event instanceof NavigationEnd),
         map(() => {
           let route = activatedRoute;
           while (route.firstChild) {
@@ -73,10 +73,10 @@ export class NgxMainViewComponent extends NarikComponent implements OnInit {
           }
           return route;
         }),
-        filter(route => route.outlet === "primary"),
-        takeWhile(x => this.isAlive)
+        filter((route) => route.outlet === 'primary'),
+        takeWhile((x) => this.isAlive)
       )
-      .subscribe(ar => {
+      .subscribe((ar) => {
         this.title = this.formTitleResolver.resolveTitle(ar.snapshot);
         this.titleService.setTitle(this.title);
       });
