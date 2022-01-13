@@ -1,17 +1,21 @@
 const path = require('path');
 const AngularCompilerPlugin = require('@ngtools/webpack/src');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const LayoutResolver = require('./build-tools/layout-resolver');
 
 module.exports = (config) => {
+  debugger;
+
   const index = config.plugins.findIndex((p) => {
     return p instanceof AngularCompilerPlugin.AngularWebpackPlugin;
   });
   const options = config.plugins[index].pluginOptions;
   options.directTemplateLoading = false;
-  config.plugins.splice(index);
-
-  config.plugins.push(new AngularCompilerPlugin.AngularWebpackPlugin(options));
-
+  config.plugins.splice(
+    index,
+    1,
+    new AngularCompilerPlugin.AngularWebpackPlugin(options)
+  );
   config.module.rules.unshift(
     {
       test: /\.html$/i,
